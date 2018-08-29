@@ -1,0 +1,122 @@
+// Functions
+//
+// Functions for this website.
+//
+// Styleguide Functions
+
+// text-size()
+//
+// Generate the proper type size given a level and a base size.
+//
+// $level - The text level. Levels range from -N - N. Ideally keep it between -2 and 10
+// $base - (Optional) The base font size. Defaults to $font-size__base (config).
+// $ratio - (Optional) The ratio to calculate font sizes. Defaults to $ratio 
+//
+// Styleguide Functions.text-size 
+@function text-size( $level, $base:$font-size__base, $ratio:$ratio ) {
+  $value: $base;
+  @if $level > 0 {
+    @for $i from 1 through $level {
+      $value: ($value * $ratio)
+    } 
+  } @else if $level < 0 {
+    @for $i from 1 through ($level * -1) {
+      $value: ($value / $ratio )
+    }
+  }
+  @return $value 
+}
+
+// spacing-size()
+//
+// Standard modularized spacing units based on the base font size
+// 
+// $size - a string representing the size: 'xs', 's', 'm'(default), 'l', 'xl', 'xxl'
+//
+// Styleguide Functions.spacing-size
+@function spacing-size( $size ) {
+  @if $size == 'm' {
+    @return $font-size__base
+  } @else if $size == 'xs' {
+    @return $font-size__base / 4 
+  } @else if $size == 's' {
+    @return $font-size__base / 2
+  } @else if $size == 'l' {
+    @return $font-size__base * 2
+  } @else if $size == 'xl' {
+    @return $font-size__base * 4
+  } @else if $size == 'xxs' {
+    @return $font-size__base / 8
+  } @else {
+    @return 0
+  }
+}
+
+// space()
+//
+// Return specially formatted spacial combinations.
+// Reference: https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+//
+// $type - String - Representing the type of space: 'inset', 'stack', 'push', 'squish', 'inline', 'stretch'
+// $size - String - Represents the amount of spacing to be used.
+//
+// Styleguide Functions.space
+@function space( $type: 'default', $size: 'm' ) {
+  @if $type == 'default' or $type == 'inset' {
+    @return spacing-size( $size );
+  }
+  @if $type == 'stack' {
+    @return 0 0 #{spacing-size( $size )} 0
+  }
+  @if $type == 'press' {
+    @if $size == 'xxs' {
+      @return #{spacing-size( 'xs' )} 0 #{spacing-size( $size )}
+    } @else if $size == 'xs'{
+      @return #{spacing-size( 's' )} 0 #{spacing-size( $size )}
+    } @else if $size == 's'{
+      @return #{spacing-size( 'm' )} 0 #{spacing-size( $size )}
+    } @else if $size == 'm'{
+      @return #{spacing-size( 'l' )} 0 #{spacing-size( $size )}
+    } @else if $size == 'l' {
+      @return #{spacing-size( 'xl' )} 0 #{spacing-size( $size )}
+    } @else {
+      @return #{spacing-size( $size )} 0
+    }
+  }
+  @if $type == 'push' {
+    @if $size == 'xxs' {
+      @return 0 0 0 #{spacing-size( 'xs' )}
+    } @else if $size == 'xs'{
+      @return 0 0 0 #{spacing-size( 's' )} 
+    } @else if $size == 's'{
+      @return 0 0 0 #{spacing-size( 'm' )}
+    } @else if $size == 'm'{
+      @return 0 0 0 #{spacing-size( 'l' )}
+    } @else if $size == 'l' {
+      @return 0 0 0 #{spacing-size( 'xl' )}
+    } @else {
+      @return 0 0 0 #{spacing-size( $size )}
+    }
+  }
+  @if $type == 'squish' {
+    @if $size == 's' {
+      @return #{spacing-size( 'xs' )} #{spacing-size( 's' )}
+    } @else if $size == 'm' {
+      @return #{spacing-size( 's' )} #{spacing-size( 'm' )}
+    } @else if $size == 'l' {
+      @return #{spacing-size( 'm' )} #{spacing-size( 'l' )}
+    }
+  }
+  @if $type == 'stretch' {
+    @if $size == 'xs' {
+      @return #{spacing-size( 's' )} #{ spacing-size( $size )}
+    } @else if $size == 's' {
+      @return #{spacing-size( 'm' )} #{ spacing-size( $size )}
+    } @else if $size == 'm' {
+      @return #{spacing-size( 'l' )} #{spacing-size( $size )}
+    }
+  }
+  @if $type == 'inline' {
+    @return 0 #{spacing-size( $size )} 0 0
+  }
+}

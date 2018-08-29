@@ -1,0 +1,412 @@
+// Mixins
+//
+// Sass mixins for this site.
+//
+// Styleguide Mixins
+
+// breakpoint( $point )
+//
+// Mixin the media queries for a specific breakpoint.<br />
+// NOTE: Minimum tablet size is based on this chart: http://thedigitaldisciple.net/wp-content/uploads/2013/11/Screen-Worksheet-10-13.bmp
+//
+// $point - A string identifying the targeted width of the browser. Options are: 's', 'm', 'l', 'xl'.
+//
+// Styleguide Mixins.breakpoint
+
+@mixin breakpoint($point) {
+  @if $point == l {
+    // rem * base = width
+    // 62 * base = 992
+    // base = 992 / 62
+    @media (min-width: 80em) { @content; } // 960px
+  }
+	@else if $point == xl {
+		//@media (min-width: 60em) { @content; }
+		@media (min-width: 80em) { @content; } // 1280px
+	}
+	@else if $point == m {
+		@media ( min-width: 46em ) { @content; } // 736 (largest iphone size in landscape
+	}
+	@else if $point == s {
+  	@media ( max-width: 46rem ) { @content; }
+	}
+}
+
+// text-level( $level )
+//
+//  Something to remove the tedium of setting up basic styles.
+//
+// $level - The level of the text you wish to create. Higher numbers are for higher levels.
+//
+// Styleguide Mixins.text-level
+@mixin text-level( $level ) {
+  font-size: text-size( $level );
+  line-height: 1.5;
+}
+
+@mixin bc-u-text--xxxxxl {
+  @include text-level( 6 );
+}
+
+@mixin bc-u-text--xxxxl {
+  @include text-level( 5 );
+}
+
+@mixin bc-u-text--xxxl {
+  @include text-level( 4 );
+}
+
+@mixin bc-u-text--xxl {
+  @include text-level( 3 );
+}
+
+@mixin bc-u-text--xl {
+  @include text-level( 2 );
+}
+
+@mixin bc-u-text--l {
+  @include text-level( 1 );
+}
+
+@mixin bc-u-text--m {
+  @include text-level( 0 );
+}
+
+@mixin bc-u-text--s {
+  @include text-level( -1 );
+}
+
+@mixin bc-u-text--xs {
+  @include text-level( -2 );
+}
+
+// Spacing
+//
+// Styleguide Mixins.Spacing
+
+// Press Spacing
+//
+// Adds twice as much space to the top as the bottom of an element. 
+//
+// Styleguide Mixins.Spacing.Press
+
+// bc-u-space-press--xxs( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.press.xxs
+@mixin bc-u-space-press--xxs( $type: 'margin' ) {
+  #{$type}: space( 'press', 'xxs' );
+}
+
+// bc-u-space-press--xs( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Press.xs
+@mixin bc-u-space-press--xs( $type: 'margin' ) {
+  #{$type}: space( 'press', 'xs' );
+}
+
+// bc-u-space-press--s( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Press.s
+@mixin bc-u-space-press--s( $type: 'margin' ) {
+  #{$type}: space( 'press', 's' );
+}
+
+// bc-u-space-press--m( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Press.m
+@mixin bc-u-space-press--m( $type: 'margin' ) {
+  #{$type}: space( 'press', 'm' );
+}
+
+// bc-u-space-press--l( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Press.l 
+@mixin bc-u-space-press--l( $type: 'margin' ) {
+  #{$type}: space( 'press', 'l' );
+}
+
+// Push Spacing
+//
+// Adds twice as much space to the top as the bottom of an element. 
+//
+// Styleguide Mixins.Spacing.Push
+
+// bc-u-space-push--xxs( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Push.xxs
+@mixin bc-u-space-push--xxs( $type: 'margin' ) {
+  #{$type}: space( 'push', 'xxs' );
+}
+
+// bc-u-space-press--xs( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Push.xs
+@mixin bc-u-space-push--xs( $type: 'margin' ) {
+  #{$type}: space( 'push', 'xs' );
+}
+
+// bc-u-space-push--s( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Push.s
+@mixin bc-u-space-push--s( $type: 'margin' ) {
+  #{$type}: space( 'push', 's' );
+}
+
+// bc-u-space-push--m( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Push.m
+@mixin bc-u-space-push--m( $type: 'margin' ) {
+  #{$type}: space( 'push', 'm' );
+}
+
+// bc-u-space-push--l( $type: 'margin' )
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Push.l 
+@mixin bc-u-space-push--l( $type: 'margin' ) {
+  #{$type}: space( 'push', 'l' );
+}
+
+// Stack Spacing
+//
+// Places space on the bottom of the element.
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Stack
+
+// bc-u-space-stack--xl
+//
+// Styleguide Mixins.Spacing.Stack.xl
+@mixin bc-u-space-stack--xl( $type: 'margin' ) {
+  #{$type}: space( 'stack', 'xl' );
+}
+
+// bc-u-space-stack--l
+//
+// Styleguide Mixins.Spacing.Stack.l
+@mixin bc-u-space-stack--l( $type: 'margin' ) {
+  #{$type}: space( 'stack', 'l' );
+}
+
+// bc-u-space-stack--m
+//
+// Styleguide Mixins.Spacing.Stack.m
+@mixin bc-u-space-stack--m( $type: 'margin' ) {
+  #{$type}: space( 'stack', 'm' );
+}
+
+// bc-u-space-stack--s
+//
+// Styleguide Mixins.Spacing.Stack.s
+@mixin bc-u-space-stack--s( $type: 'margin' ) {
+  #{$type}: space( 'stack', 's' );
+}
+
+// bc-u-space-stack--xs
+//
+// Styleguide Mixins.Spacing.Stack.xs
+@mixin bc-u-space-stack--xs( $type: 'margin' ) {
+  #{$type}: space( 'stack', 'xs' );
+}
+
+// bc-u-space-stack--xxs
+//
+// Styleguide Mixins.Spacing.Stack.xxs
+@mixin bc-u-space-stack--xxs( $type: 'margin' ) {
+  #{$type}: space( 'stack', 'xxs' );
+}
+
+// Inline Spacing
+//
+// Places space to the right of the element.
+//
+// Style Guide: Mixins.Spacing.Inline
+
+// bc-u-space-inline--xl
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.xl
+@mixin bc-u-space-inline--xl( $type: 'margin' ) {
+  #{$type}: space( 'inline', 'xl' );
+}
+
+// bc-u-space-inline--l
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.l
+@mixin bc-u-space-inline--l( $type: 'margin' ) {
+  #{$type}: space( 'inline', 'l' );
+}
+
+// bc-u-space-inline--m
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.m
+@mixin bc-u-space-inline--m( $type: 'margin' ) {
+  #{$type}: space( 'inline', 'm' );
+}
+
+// bc-u-space-inline--s
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.s
+@mixin bc-u-space-inline--s( $type: 'margin' ) {
+  #{$type}: space( 'inline', 's' );
+}
+
+// bc-u-space-inline--xs
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.xs
+@mixin bc-u-space-inline--xs( $type: 'margin' ) {
+  #{$type}: space( 'inline', 'xs' );
+}
+
+// bc-u-space-inline--xxs
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Styleguide Mixins.Spacing.Inline.xxs
+@mixin bc-u-space-inline--xxs( $type: 'margin' ) {
+  #{$type}: space( 'inline', 'xxs' );
+}
+
+// Inset Spacing
+//
+// Places equal space on each side of an element.
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Style Guide Mixins.Spacing.Inset
+
+// bc-u-space-inset--xl
+//
+// Style Guide Mixins.Spacing.Inset.xl
+@mixin bc-u-space-inset--xl( $type: 'margin' ) {
+  #{$type}: space( 'inset', 'xl' );
+}
+
+// bc-u-space-inset--l
+//
+// Style Guide: Mixins.Spacing.Inset.l
+@mixin bc-u-space-inset--l( $type: 'margin' ) {
+  #{$type}: space( 'inset', 'l' );
+}
+
+// bc-u-space-inset--m
+//
+// Style Guide: Mixins.Spacing.Inset.m
+@mixin bc-u-space-inset--m( $type: 'margin' ) {
+  #{$type}: space( 'inset', 'm' );
+}
+
+// bc-u-space-inset--s
+//
+// Style Guide: Mixins.Spacing.Inset.s
+@mixin bc-u-space-inset--s( $type: 'margin' ) {
+  #{$type}: space( 'inset', 's' );
+}
+
+// bc-u-space-inset--xs
+//
+// Style Guide: Mixins.Spacing.Inset.xs
+@mixin bc-u-space-inset--xs( $type: 'margin' ) {
+  #{$type}: space( 'inset', 'xs' );
+}
+
+// bc-u-space-inset--xxs
+//
+// Style Guide: Mixins.Spacing.Inset.xxs
+@mixin bc-u-space-inset--xxs( $type: 'margin' ) {
+  #{$type}: space( 'inset', 'xxs' );
+}
+
+// Stretch Spacing
+//
+// Places twice as much spacing on the top as on the sides.
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Style Guide Mixins.Spacing.Stretch
+
+// bc-u-space-stretch--l
+//
+// Style Guide Mixins.Spacing.Stretch.l
+@mixin bc-u-space-stretch--l( $type: 'margin' ) {
+  #{$type}: space( 'stretch', 'l' );
+}
+
+// bc-u-space-stretch--m
+//
+// Style Guide: Mixins.Spacing.Stretch.m
+@mixin bc-u-space-stretch--m( $type: 'margin' ) {
+  #{$type}: space( 'stretch', 'm' );
+}
+
+// bc-u-space-stretch--s
+//
+// Style Guide: Mixins.Spacing.Stretch.s
+@mixin bc-u-space-stretch--s( $type: 'margin' ) {
+  #{$type}: space( 'stretch', 's' );
+}
+
+// bc-u-space-stretch--xs
+//
+// Style Guide: Mixins.Spacing.Stretch.xs
+@mixin bc-u-space-stretch--xs( $type: 'margin' ) {
+  #{$type}: space( 'stretch', 'xs' );
+}
+
+// Squish Spacing
+//
+// Places twice as much spacing on the sides as on the top and bottom.
+//
+// $type - Which part of the box model to add the space to. Options: 'margin' (default), 'padding'.
+//
+// Style Guide Mixins.Spacing.Squish
+
+// bc-u-space-squish--l
+//
+// Style Guide Mixins.Spacing.Squish.l
+@mixin bc-u-space-squish--l( $type: 'margin' ) {
+  #{$type}: space( 'squish', 'l' );
+}
+
+// bc-u-space-squish--m
+//
+// Style Guide Mixins.Spacing.Squish.m
+@mixin bc-u-space-squish--m( $type: 'margin' ) {
+  #{$type}: space( 'squish', 'm' );
+}
+
+// bc-u-space-squish--s
+//
+// Style Guide Mixins.Spacing.Squish.s
+@mixin bc-u-space-squish--s( $type: 'margin' ) {
+  #{$type}: space( 'squish', 's' );
+}

@@ -1,0 +1,59 @@
+// TYPOGRAPHY
+//
+// Define the typographic styles for elements on the site.
+// We define each style as a placeholder. In conversations with other
+// designers, stakeholders, and content editors, terms like 'h3', 'third level header'
+// and section header get confused.
+//
+// There are many different circumstances where the same typographic styles needs to be added to dis-similiar
+// elements. But using SASS templates, we can keep the styles consistant without constantly hunting down and changing
+// every instance of a style. 
+//
+// Style Guide: Base.Typography
+
+//	DEFAULTS (~defaults)
+h1,
+.text__heading--xl {
+  @extend %sg-heading--xl;
+}
+
+h2,
+.text__heading--l {
+  @extend %sg-heading--l;
+}
+
+h3,
+.text__heading--m {
+  @extend %sg-heading--m;
+}
+
+h4,
+.text__heading--s {
+  @extend %sg-heading--s;
+}
+
+h5,
+h6,
+.text__heading--xs {
+  @extend %sg-heading--xs;
+}
+
+.text--l {
+  @extend %sg-text--xl;
+}
+
+body,
+.text--m {
+  @extend %sg-text--m;
+}
+
+small,
+.text--s {
+  @extend %sg-text--s;
+}
+
+.text--xs {
+  @extend %sg-text--xs;
+  color: inherit;
+  line-height: inherit;
+}

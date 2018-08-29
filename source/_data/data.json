@@ -71,5 +71,88 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+  
+  "fields" : {
+    "required" : false,
+    "label" : {
+      "name" : "Label",
+      "for" : "field-1",
+      "id" : "label-1"
+    },
+    "select" : {
+      "id" : "select-1",
+      "labelledby" : "select-label-1",
+      "options" : [
+        { 
+          "label" : "Option 1",
+          "value" : "option-1"
+        },
+        { 
+          "label" : "Option 2",
+          "value" : "option-2"
+        },
+        { 
+          "label" : "Option 3",
+          "value" : "option-3"
+        },
+        { 
+          "label" : "Option 4",
+          "value" : "option-4"
+        } 
+      ]
+    },
+    "checkbox" : {
+      "id" : "checkbox-1",
+      "name" : "checkbox-1",
+      "checked" : false
+    },
+    "radio-button" : {
+      "id" : "radio-button-1",
+      "name" : "radio-button-1",
+      "checked" : false
+    },
+    "text" : {
+      "id" : "text-1",
+      "placeholder" : "Placeholder Text",
+      "described-by" : "description-1",
+      "labelled-by" : "text-label-1"
+    },
+    "textarea" : {
+      "id" : "textarea-1",
+      "placeholder" : "Placeholder Text",
+      "described-by" : "description-1",
+      "labelled-by" : "textarea-label-1"
+    },
+    "number" : {
+      "id" : "number-1",
+      "value" : "5",
+      "min" : "0",
+      "max" : "10"
+    },
+    "color" : {
+      "id" : "color-1",
+      "value" : "#000000"
+    },
+    "range" : {
+      "id" : "range-1",
+      "value" : "10"
+    },
+    "date" : {
+      "id" : "date-1",
+      "value" : "1970-01-01"
+    },
+    "month" : {
+      "id" : "month-1",
+      "value" : "1970-01"
+    },
+    "week" : {
+      "id" : "week-1",
+      "value" : "1970-W01"
+    },
+    "datetime" : {
+      "id" : "datetime-1",
+      "value" : "1970-01-01T00:00:00Z"
+    }
+  }
 }

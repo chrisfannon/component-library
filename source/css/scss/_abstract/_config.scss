@@ -1,0 +1,58 @@
+// Configuration
+//
+// Set up all the variables that we need for this site. Including colors, fonts, sizes, multipiliers.
+//
+// ##### Typography Variables
+// - *$display-font*: A sans-serif font for large titles and headline.
+// - *$body-font*: A serif font that serves as the workhorse of the site.
+//
+// ##### Color Variables
+// These colors are considered part of the Color module for the Style Guide.
+// - $babson-color__green - #006644, Primary Babson Green
+// - $babson-color__green--dark: $babson-primary-darker
+// - $babson-color__green--light -  #469042
+//
+// Styleguide Config
+
+//	VARIABLES (~variables)
+
+// Type Size Configuration
+$font-size__base: 1.6rem; // The base font size. This should be what the main body copy is set as.
+$ratio: 1.2; // The modular scale used to determine heading sizes. 
+
+//	- font stacks
+$display-font: 'franklin-gothic-urw-comp-n4', 'franklin-gothic-urw-comp', 'league-gothic-n4', 'league-gothic', 'league-gothic-backup', 'league-gothic-local', 'HelveticaNeue', Verdana, sans-serif;
+$body-font: 'Open Sans' sans-serif;
+
+//	- colors
+$sg-color__green--300: #eaf7c6;
+$sg-color__green--400: #cae778;
+$sg-color__green--500: #84bd00;
+$sg-color__green--600: #587604;
+$sg-color__green--700: #33430a;
+$sg-color__blue--300: #e8f4fc;
+$sg-color__blue--400: #b6dffa;
+$sg-color__blue--500: #62b5e5;
+$sg-color__blue--600: #116fa2;
+$sg-color__blue--700: #074567;
+$sg-color__grayscale--000: #fff;
+$sg-color__grayscale--005: #f2f2f2;
+$sg-color__grayscale--010: #e6e6e6;
+$sg-color__grayscale--020: #cccccc;
+$sg-color__grayscale--030: #b3b3b3;
+$sg-color__grayscale--070: #4d4d4d;
+$sg-color__grayscale--080: #333;
+$sg-color__grayscale--090: #1a1a1a;
+$sg-color__grayscale--100: #000;
+$sg-color__system--success: #37761e;
+$sg-color__system--warning: #bf3c30;
+$sg-color__system--error: #9a6d18;
+$sg-color__other--001: #a24a0f;
+$sg-color__other--002: #e0a430;
+
+
+// - breakpoints
+$sg-breakpoint--s: 46.0rem;
+$sg-breakpoint--m: 73.6rem;
+$sg-breakpoint--l: 96.0rem;
+$sg-breakpoint--xl: 128.0rem;

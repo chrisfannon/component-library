@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -63,6 +64,19 @@ module.exports = function (grunt) {
 
 
   grunt.initConfig({
+    
+    // Compile SCSS into CSS
+    // Save it in a temp folder.
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          "source/css/style.css" : "source/css/scss/style.scss"
+        }
+      }
+    },
 
     /******************************************************
      * COPY TASKS
@@ -153,7 +167,7 @@ module.exports = function (grunt) {
   ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
+  grunt.registerTask('patternlab:build', ['sass', 'patternlab', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
 

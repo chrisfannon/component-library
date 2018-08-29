@@ -1,3 +1,249 @@
-/*
- * YOUR STYLES HERE
- */
+h1,
+.text__heading--xl {
+  font-size: 3.98131rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+  color: #074567;
+  font-weight: bold;
+}
+@media (min-width: 80em) {
+  h1,
+  .text__heading--xl {
+    font-size: 4.77757rem;
+    line-height: 1.5;
+  }
+}
+
+h2,
+.text__heading--l {
+  font-size: 3.31776rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+  color: #074567;
+  font-weight: bold;
+}
+@media (min-width: 80em) {
+  h2,
+  .text__heading--l {
+    font-size: 3.98131rem;
+    line-height: 1.5;
+  }
+}
+
+h3,
+.text__heading--m {
+  font-size: 2.7648rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+  color: #074567;
+  font-weight: bold;
+}
+@media (min-width: 80em) {
+  h3,
+  .text__heading--m {
+    font-size: 3.31776rem;
+    line-height: 1.5;
+  }
+}
+
+h4,
+.text__heading--s {
+  font-size: 2.304rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+  color: #074567;
+  font-weight: bold;
+}
+@media (min-width: 80em) {
+  h4,
+  .text__heading--s {
+    font-size: 2.7648rem;
+    line-height: 1.5;
+  }
+}
+
+h5,
+h6,
+.text__heading--xs {
+  font-size: 1.92rem;
+  line-height: 1.5;
+  color: #074567;
+  font-weight: bold;
+}
+@media (min-width: 80em) {
+  h5,
+  h6,
+  .text__heading--xs {
+    font-size: 2.304rem;
+    line-height: 1.5;
+  }
+}
+
+.text--l {
+  font-size: 1.92rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+}
+@media (min-width: 80em) {
+  .text--l {
+    font-size: 2.304rem;
+    line-height: 1.5;
+  }
+}
+
+body,
+.text--m {
+  font-size: 1.92rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+}
+@media (min-width: 80em) {
+  body,
+  .text--m {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+small,
+.text--s {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+}
+@media (min-width: 80em) {
+  small,
+  .text--s {
+    font-size: 1.33333rem;
+    line-height: 1.5;
+  }
+}
+
+.text--xs {
+  font-size: 1.33333rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+}
+@media (min-width: 80em) {
+  .text--xs {
+    font-size: 1.11111rem;
+    line-height: 1.5;
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+a:link {
+  color: #116fa2;
+}
+a:visited {
+  color: #587604;
+}
+a:hover {
+  color: #a24a0f;
+}
+a:active {
+  color: #116fa2;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #4d4d4d;
+}
+
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden,
+.hidden--visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible,
+.hidden--invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.text--xs {
+  color: inherit;
+  line-height: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

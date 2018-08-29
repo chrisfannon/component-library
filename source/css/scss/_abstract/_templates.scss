@@ -1,0 +1,182 @@
+// Templates
+//
+// Templates for common site elements. 
+//
+// Style Guide: Abstract.Templates
+
+// Typography Templates
+//
+// 1 %sg-heading--xl  - Defines the primary heading
+// 2 %sg-heading--l   - Defines the 2nd level heading
+// 3 %sg-heading--m   - Defines the 3rd level heading
+// 4 %sg-heading--s   - Defines a smaller heading
+// 5 %sg-heading--xs  - Defines the smallest heading
+// 6 %sg-text--l      - Defines the lead style.
+// 7 %sg-text--m      - Defines the main style of the body copy
+// 8 %sg-text--s      - Defines a caption style. Also used as 'small text'
+// 9 %sg-text--xs     - Defines a tiny style.
+//
+// Style Guide: Base.Sass-Templates	
+
+
+// %sg-heading--xl
+//
+// Style Guide: Abstract.Templates.Typography.heading-extra-large
+%sg-heading--xl {
+  @include bc-u-text--xxxxl;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xxxxxl;
+  }
+  
+  // Seasoning
+	color: $sg-color__blue--700;
+	font-weight: bold;
+}
+
+// %sg-heading--l
+//
+// Style Guide: Abstract.Templates.Typography.heading-large
+%sg-heading--l {
+  @include bc-u-text--xxxl;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xxxxl;
+  }
+  
+  // Seasoning
+	color: $sg-color__blue--700;
+	font-weight: bold;
+}
+
+// %sg-heading--m
+//
+// Style Guide: Abstract.Templates.Typography.heading-medium
+%sg-heading--m {
+  @include bc-u-text--xxl;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xxxl;
+  }
+  
+  // Seasoning
+	color: $sg-color__blue--700;
+	font-weight: bold;
+}
+
+// %sg-heading--s
+//
+// Style Guide: Abstract.Templates.Typography.heading-small
+%sg-heading--s {
+  @include bc-u-text--xl;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xxl;
+  }
+  
+  // Seasoning
+  color: $sg-color__blue--700;
+	font-weight: bold;
+}
+
+// %sg-heading--xs
+//
+// Style Guide: Abstract.Templates.Typography.heading-extra-small
+%sg-heading--xs {
+  @include bc-u-text--l;
+  @include breakpoint( l ) {
+    @include bc-u-text--xl;
+  }
+  
+  // Seasoning
+  color: $sg-color__blue--700;
+	font-weight: bold;
+}
+
+// %sg-text--xl
+//
+// Style Guide: Abstract.Templates.Typography.text-extra-large
+%sg-text--xl {
+  @include bc-u-text--l;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xl;
+  }
+}
+
+// %sg-text--l
+//
+// Style Guide: Abstract.Templates.Typography.text-large
+%sg-text--l {
+  @include bc-u-text--l;
+  @include bc-u-space-stack--m;
+}
+
+// %sg-text--m
+//
+// Style Guide: Abstract.Templates.Typography.text-medium
+%sg-text--m {
+  @include bc-u-text--l;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--m;
+  }
+}
+
+// %sg-text--s
+//
+// Style Guide: Abstract.Templates.Typography.text-small
+%sg-text--s {
+  @include bc-u-text--m;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--s;
+  }
+}
+
+// %sg-text--xs
+//
+// Style Guide: Abstract.Templates.Typography.text-tiny
+%sg-text--xs {
+  @include bc-u-text--s;
+  @include bc-u-space-stack--m;
+  @include breakpoint( l ) {
+    @include bc-u-text--xs;
+  }
+}
+
+// %table-template
+//
+// Style Guide: Abstract.Templates.Base.table
+%table-template {
+  @include bc-u-space-stack--m;
+  
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  
+  thead {
+    tr {
+      border-bottom-color: $sg-color__grayscale--070;
+    }
+  }
+  
+  th {
+    @include bc-u-text--s;
+    
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  tr {
+    border-bottom: 1px solid $sg-color__grayscale--020;
+  }
+  
+  th,
+  td {
+    @include bc-u-space-inset--s( 'padding' );
+    
+    word-wrap: normal;
+  }
+}
