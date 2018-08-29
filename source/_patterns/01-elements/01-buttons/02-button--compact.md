@@ -1,6 +1,6 @@
 ---
-title: Link Button
+title: Compact Button
 ---
 
-A link button is composed of a link and an icon. They are the third level of buttons after primary and secondary. Link buttons can often be formed into navigation lists.
+A compact button is a secondary button with it's dimensions shrunk down to fit into tight spaces - link a table row or a row of tools on an editing interface
 
