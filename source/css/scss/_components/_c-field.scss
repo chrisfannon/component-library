@@ -1,3 +1,35 @@
+$base: '.c-field';
+
+#{ $base } { 
+  align-items: flex-start;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  @include sg-u-space-stack--m;
+  label {
+    @include sg-u-space-stack--xs;
+    @include sg-u-transition--m;
+  } 
+  input {
+    @include sg-u-space-stack--xs;
+  }
+  p {
+   @include sg-u-text--xs; 
+   @include sg-u-transition--m;
+  }
+  
+  &.focused {
+    label {
+      color: $sg-color__blue--700;
+    }
+    p {
+      color: $sg-color__blue--600;
+    }
+  }
+}
+
+/*
 .c-field {
   align-items: stretch;
   color: #4d4d4d;
@@ -76,3 +108,4 @@
     margin-bottom: 0.8rem;
   }
 }
+*/

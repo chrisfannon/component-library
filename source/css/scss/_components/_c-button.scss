@@ -2,9 +2,9 @@ $base: '.c-button';
 
 #{ $base } {
   @at_root #{&}--primary {
-    @include bc-u-text--m;
-    @include bc-u-space-squish--l( 'padding' );
-    @include bc-u-space-stack--l;
+    @include sg-u-text--m;
+    @include sg-u-space-squish--l( 'padding' );
+    @include sg-u-space-stack--l;
     background-color: $sg-color__blue--600;
     border: none;
     border-radius: 3px;
@@ -23,9 +23,9 @@ $base: '.c-button';
     }
   }
   @at_root #{&}--secondary {
-    @include bc-u-text--m;
-    @include bc-u-space-squish--l( 'padding' );
-    @include bc-u-space-stack--l;
+    @include sg-u-text--m;
+    @include sg-u-space-squish--l( 'padding' );
+    @include sg-u-space-stack--l;
     background-color: $sg-color__grayscale--000;
     border: 1px solid $sg-color__blue--600;
     border-radius: 3px;
@@ -42,9 +42,9 @@ $base: '.c-button';
     }
   }
   @at_root #{&}--compact {
-    @include bc-u-text--s;
-    @include bc-u-space-squish--m( 'padding' );
-    @include bc-u-space-stack--l;
+    @include sg-u-text--s;
+    @include sg-u-space-squish--m( 'padding' );
+    @include sg-u-space-stack--l;
     background-color: $sg-color__grayscale--000;
     border: 1px solid $sg-color__blue--600;
     border-radius: 3px;
@@ -61,9 +61,9 @@ $base: '.c-button';
     }
   }
   @at_root #{&}--tiny {
-    @include bc-u-text--xs;
-    @include bc-u-space-squish--s( 'padding' );
-    @include bc-u-space-stack--l;
+    @include sg-u-text--xs;
+    @include sg-u-space-squish--s( 'padding' );
+    @include sg-u-space-stack--l;
     background-color: $sg-color__grayscale--000;
     border: 1px solid $sg-color__blue--600;
     border-radius: 3px;
