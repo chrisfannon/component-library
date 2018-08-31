@@ -1,6 +1,6 @@
 h1,
 .text__heading--xl {
-  font-size: 3.98131rem;
+  font-size: 3.981312rem;
   line-height: 1.5;
   margin: 0 0 1.6rem 0;
   color: #074567;
@@ -9,7 +9,7 @@ h1,
 @media (min-width: 80em) {
   h1,
   .text__heading--xl {
-    font-size: 4.77757rem;
+    font-size: 4.7775744rem;
     line-height: 1.5;
   }
 }
@@ -25,7 +25,7 @@ h2,
 @media (min-width: 80em) {
   h2,
   .text__heading--l {
-    font-size: 3.98131rem;
+    font-size: 3.981312rem;
     line-height: 1.5;
   }
 }
@@ -114,19 +114,19 @@ small,
 @media (min-width: 80em) {
   small,
   .text--s {
-    font-size: 1.33333rem;
+    font-size: 1.3333333333rem;
     line-height: 1.5;
   }
 }
 
 .text--xs {
-  font-size: 1.33333rem;
+  font-size: 1.3333333333rem;
   line-height: 1.5;
   margin: 0 0 1.6rem 0;
 }
 @media (min-width: 80em) {
   .text--xs {
-    font-size: 1.11111rem;
+    font-size: 1.1111111111rem;
     line-height: 1.5;
   }
 }
