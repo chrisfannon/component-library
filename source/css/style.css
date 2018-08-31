@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 h1,
 .text__heading--xl {
   font-size: 3.981312rem;
@@ -242,7 +243,7 @@ textarea:focus {
 }
 
 label {
-  font-size: 1.33333rem;
+  font-size: 1.3333333333rem;
   line-height: 1.5;
   color: #4d4d4d;
   font-weight: bold;
@@ -296,6 +297,10 @@ textarea {
   clear: both;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .text--xs {
   color: inherit;
   line-height: inherit;
@@ -342,7 +347,7 @@ textarea {
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
 }
 .c-button--compact {
-  font-size: 1.33333rem;
+  font-size: 1.3333333333rem;
   line-height: 1.5;
   padding: 0.8rem 1.6rem;
   margin: 0 0 3.2rem 0;
@@ -362,7 +367,7 @@ textarea {
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
 }
 .c-button--tiny {
-  font-size: 1.11111rem;
+  font-size: 1.1111111111rem;
   line-height: 1.5;
   padding: 0.4rem 0.8rem;
   margin: 0 0 3.2rem 0;
@@ -459,7 +464,7 @@ textarea {
   margin: 0 0 0.4rem 0;
 }
 .c-field p {
-  font-size: 1.11111rem;
+  font-size: 1.1111111111rem;
   line-height: 1.5;
   transition: all .3s ease-out;
 }
