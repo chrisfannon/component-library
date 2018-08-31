@@ -13,6 +13,11 @@
 // Style Guide: Base
 
 //	DEFAULTS (~defaults)
+
+* {
+  box-sizing: border-box;
+}
+
 a {
 	text-decoration: underline;
 	&:link {
@@ -49,6 +54,10 @@ textarea {
 body {  
   background-color: $sg-color__grayscale--005;
   margin: 0;
+}
+
+p {
+  @include sg-u-space-stack--m;
 }
 
 //	Remove text-shadow in selection highlight: h5bp.com/i
@@ -88,6 +97,53 @@ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
+}
+
+// Default styles of input fields
+
+input[type='text'],
+input[type='datetime'],
+input[type='month'],
+input[type='week'],
+input[type='number'],
+textarea {
+  @include sg-u-space-inset--m( 'padding' );
+  @include sg-u-text--m;
+  @include sg-u-transition--m;
+  
+  background-color: $sg-color__grayscale--000;
+  border: 1px solid $sg-color__grayscale--010;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 0px 0 $sg-color__blue--600;
+  color: $sg-color__grayscale--100;
+  width: 100%;
+}
+input[type='text']:hover,
+input[type='datetime']:hover,
+input[type='month']:hover,
+input[type='week']:hover,
+input[type='number']:hover,
+textarea:hover {
+  background-color: $sg-color__blue--300;
+  border-color: $sg-color__blue--600;
+}
+input[type='text']:focus,
+input[type='datetime']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='number']:focus,
+textarea:focus {
+  background-color: $sg-color__blue--300;
+  border-color: $sg-color__blue--600;
+  box-shadow: inset 0px -3px 0px 0 $sg-color__blue--500;
+  color: $sg-color__blue--600;
+}
+
+label {
+  @include sg-u-text--s;
+  
+  color: $sg-color__grayscale--070;
+  font-weight: bold;
 }
 
 //	Allow only vertical resizing of textareas.

@@ -23,10 +23,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.heading-extra-large
 %sg-heading--xl {
-  @include bc-u-text--xxxxl;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--xxxxl;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xxxxxl;
+    @include sg-u-text--xxxxxl;
   }
   
   // Seasoning
@@ -38,10 +38,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.heading-large
 %sg-heading--l {
-  @include bc-u-text--xxxl;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--xxxl;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xxxxl;
+    @include sg-u-text--xxxxl;
   }
   
   // Seasoning
@@ -53,10 +53,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.heading-medium
 %sg-heading--m {
-  @include bc-u-text--xxl;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--xxl;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xxxl;
+    @include sg-u-text--xxxl;
   }
   
   // Seasoning
@@ -68,10 +68,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.heading-small
 %sg-heading--s {
-  @include bc-u-text--xl;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--xl;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xxl;
+    @include sg-u-text--xxl;
   }
   
   // Seasoning
@@ -83,9 +83,9 @@
 //
 // Style Guide: Abstract.Templates.Typography.heading-extra-small
 %sg-heading--xs {
-  @include bc-u-text--l;
+  @include sg-u-text--l;
   @include breakpoint( l ) {
-    @include bc-u-text--xl;
+    @include sg-u-text--xl;
   }
   
   // Seasoning
@@ -97,10 +97,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.text-extra-large
 %sg-text--xl {
-  @include bc-u-text--l;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--l;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xl;
+    @include sg-u-text--xl;
   }
 }
 
@@ -108,18 +108,18 @@
 //
 // Style Guide: Abstract.Templates.Typography.text-large
 %sg-text--l {
-  @include bc-u-text--l;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--l;
+  @include sg-u-space-stack--m;
 }
 
 // %sg-text--m
 //
 // Style Guide: Abstract.Templates.Typography.text-medium
 %sg-text--m {
-  @include bc-u-text--l;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--l;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--m;
+    @include sg-u-text--m;
   }
 }
 
@@ -127,10 +127,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.text-small
 %sg-text--s {
-  @include bc-u-text--m;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--m;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--s;
+    @include sg-u-text--s;
   }
 }
 
@@ -138,10 +138,10 @@
 //
 // Style Guide: Abstract.Templates.Typography.text-tiny
 %sg-text--xs {
-  @include bc-u-text--s;
-  @include bc-u-space-stack--m;
+  @include sg-u-text--s;
+  @include sg-u-space-stack--m;
   @include breakpoint( l ) {
-    @include bc-u-text--xs;
+    @include sg-u-text--xs;
   }
 }
 
@@ -149,7 +149,7 @@
 //
 // Style Guide: Abstract.Templates.Base.table
 %table-template {
-  @include bc-u-space-stack--m;
+  @include sg-u-space-stack--m;
   
   border-collapse: collapse;
   table-layout: fixed;
@@ -162,7 +162,7 @@
   }
   
   th {
-    @include bc-u-text--s;
+    @include sg-u-text--s;
     
     font-weight: normal;
     text-align: left;
@@ -175,7 +175,7 @@
   
   th,
   td {
-    @include bc-u-space-inset--s( 'padding' );
+    @include sg-u-space-inset--s( 'padding' );
     
     word-wrap: normal;
   }
