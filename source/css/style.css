@@ -541,6 +541,10 @@ textarea {
   position: absolute;
   top: -999px;
 }
+[type="checkbox"]:focus + label,
+[type="radio"]:focus + label {
+  background-color: #b6dffa;
+}
 [type="checkbox"] + label,
 [type="radio"] + label {
   padding: 0.8rem 1.6rem;
