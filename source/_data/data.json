@@ -111,12 +111,68 @@
         "checked" : false
       }
     ],
+    "checkboxList" : [
+      {
+        "id" : "checkbox1",
+        "name" : "checkbox1",
+        "label" : "Checkbox Option 1",
+        "checked" : false
+      },
+      {
+        "id" : "checkbox2",
+        "name" : "checkbox2",
+        "label" : "Checkbox Option 2",
+        "checked" : false
+      },
+      {
+        "id" : "checkbox3",
+        "name" : "checkbox3",
+        "label" : "Checkbox Option 3",
+        "checked" : false
+      },
+      {
+        "id" : "checkbox4",
+        "name" : "checkbox4",
+        "label" : "Checkbox Option 4",
+        "checked" : false
+      }
+    ],
     "radios" : [
       {
         "id" : "radio1",
         "name" : "radio1",
         "value" : "test-value",
         "label" : "Radio Button",
+        "checked" : false
+      }
+    ],
+    "radioList" : [
+      {
+        "id" : "radio1",
+        "name" : "radio",
+        "value" : "test-value",
+        "label" : "Option 1",
+        "checked" : false
+      },
+      {
+        "id" : "radio2",
+        "name" : "radio",
+        "value" : "test-value",
+        "label" : "Option 2",
+        "checked" : false
+      },
+      {
+        "id" : "radio3",
+        "name" : "radio",
+        "value" : "test-value",
+        "label" : "Option 3",
+        "checked" : false
+      },
+      {
+        "id" : "radio4",
+        "name" : "radio",
+        "value" : "test-value",
+        "label" : "Option 4",
         "checked" : false
       }
     ],

@@ -54,6 +54,9 @@ $base: '.c-field';
     left: -999px;
     position: absolute;
     top: -999px;
+    &:focus + label {
+      background-color: $sg-color__blue--400;
+    }
     & + label {
       @include sg-u-space-squish--m( 'padding' );
       display: inline-block;
