@@ -150,7 +150,9 @@
 // Style Guide: Abstract.Templates.Base.table
 %table-template {
   @include sg-u-space-stack--m;
+  @include sg-u-text--s;
   
+  background-color: $sg-color__grayscale--000;
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
@@ -158,25 +160,49 @@
   thead {
     tr {
       border-bottom-color: $sg-color__grayscale--070;
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
   
   th {
     @include sg-u-text--s;
+    @include sg-u-space-inset--xs( 'padding' );
     
-    font-weight: normal;
+    font-weight: bold;
     text-align: left;
-    text-transform: uppercase;
+    
+    border-bottom: 1px solid $sg-color__grayscale--070;
+    padding-top: 3.2rem;
+    padding-left: 0;
+    margin-right: 2.0px;
   }
   
   tr {
     border-bottom: 1px solid $sg-color__grayscale--020;
+    transition: all .3s ease-out;
+  }
+  tr:hover {
+    background-color: #EFF7DA;
   }
   
-  th,
   td {
     @include sg-u-space-inset--s( 'padding' );
+    padding-left: 0;
     
     word-wrap: normal;
+  }
+  td {
+    border-bottom: 1px solid #ccc;
+    //padding: 0.8rem 1.6rem 0.8rem 0;
+  }
+  td:first-child,
+  th:first-child {
+    padding-left: 3.2rem;
+  }
+  td:last-child,
+  th:last-child {
+    padding-right: 3.2rem;
   }
 }

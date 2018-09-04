@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      {{# table.headers }}
+      <th>{{ text }}</th>
+      {{/ table.headers }}
+    </tr>
+  </thead>
+  <tbody>
+    {{# table.rows }}
+    <tr>
+      {{# table.cells }}
+      <td>{{ text }}</td>
+      {{/ table.cells }}
+    </tr>
+    {{/ table.rows }}
+  </tbody>
+</table>

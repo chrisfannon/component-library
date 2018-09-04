@@ -22,7 +22,7 @@ $ratio: 1.2; // The modular scale used to determine heading sizes.
 
 //	- font stacks
 $display-font: 'franklin-gothic-urw-comp-n4', 'franklin-gothic-urw-comp', 'league-gothic-n4', 'league-gothic', 'league-gothic-backup', 'league-gothic-local', 'HelveticaNeue', Verdana, sans-serif;
-$body-font: 'Open Sans' sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
 //	- colors
 $sg-color__green--300: #eaf7c6;
@@ -45,8 +45,10 @@ $sg-color__grayscale--080: #333;
 $sg-color__grayscale--090: #1a1a1a;
 $sg-color__grayscale--100: #000;
 $sg-color__system--success: #37761e;
-$sg-color__system--warning: #bf3c30;
-$sg-color__system--error: #9a6d18;
+$sg-color__system--success--light: #d7e7d1;
+$sg-color__system--warning: #9a6d18;
+$sg-color__system--error: #bf3c30;
+$sg-color__system--error--light: #f2c3be;
 $sg-color__other--001: #a24a0f;
 $sg-color__other--002: #e0a430;
 

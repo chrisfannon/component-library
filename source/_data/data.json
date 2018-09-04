@@ -103,24 +103,36 @@
         } 
       ]
     },
-    "checkbox" : {
-      "id" : "checkbox-1",
-      "name" : "checkbox-1",
-      "checked" : false
-    },
-    "radio-button" : {
-      "id" : "radio-button-1",
-      "name" : "radio-button-1",
-      "checked" : false
+    "checkboxes" : [
+      {
+        "id" : "checkbox1",
+        "name" : "checkbox1",
+        "label" : "Checkbox",
+        "checked" : false
+      }
+    ],
+    "radios" : [
+      {
+        "id" : "radio1",
+        "name" : "radio1",
+        "value" : "test-value",
+        "label" : "Radio Button",
+        "checked" : false
+      }
+    ],
+    "description" : {
+      "id" : "description-1"
     },
     "text" : {
-      "id" : "text-1",
+      "id" : "text1",
+      "name" : "text1",
       "placeholder" : "Placeholder Text",
       "described-by" : "description-1",
       "labelled-by" : "text-label-1"
     },
     "textarea" : {
-      "id" : "textarea-1",
+      "id" : "field-1",
+      "name" : "name-1",
       "placeholder" : "Placeholder Text",
       "described-by" : "description-1",
       "labelled-by" : "textarea-label-1"
@@ -161,4 +173,43 @@
   	"medium" : "My Label",
   	"long" : "Labels and Things"
 	},
+	"table" : {
+  	"headers" : [
+    	{
+      	"text" : "Header 1"
+    	},
+    	{
+      	"text" : "Header 2"
+    	},
+    	{
+      	"text" : "Header 3"
+    	},
+    	{
+      	"text" : "Header 4"
+    	},
+    	{
+      	"text" : "Header 5"
+    	}
+  	],
+  	"rows" : [
+  	  {}, {}, {}, {}, {}, {}
+  	],
+  	"cells" : [
+    	{
+      	"text" : "Data"
+    	},
+    	{
+      	"text" : "Data"
+    	},
+    	{
+      	"text" : "Data"
+    	},
+    	{
+      	"text" : "Data"
+    	},
+    	{
+      	"text" : "Data"
+    	}
+  	]
+	}
 }

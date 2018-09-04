@@ -53,6 +53,7 @@ textarea {
 
 body {  
   background-color: $sg-color__grayscale--005;
+  font-family: $body-font;
   margin: 0;
 }
 
@@ -150,6 +151,11 @@ label {
 
 textarea {
     resize: vertical;
+}
+
+// Tables
+table {
+  @extend %table-template;
 }
 
 //	Helper classes
