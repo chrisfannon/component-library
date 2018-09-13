@@ -1,0 +1,60 @@
+{
+  "sample-form" : {
+  	"textfields" : [
+    	{
+        "id" : "text1",
+        "name" : "text1",
+        "label" : "Tilltalsnamn",
+        "placeholder" : "Placeholder Text",
+        "described-by" : "description-1",
+        "labelled-by" : "text-label-1",
+        "excerpt" : {
+          "tiny" : "This is my description"
+        }
+    	}, {
+      	"id" : "text2",
+        "name" : "text2",
+        "label" : "Färg",
+        "placeholder" : "Placeholder Text",
+        "described-by" : "description-1",
+        "labelled-by" : "text-label-1",
+        "field-description" : {
+          "excerpt" : {
+            "tiny" : "Här kan du skriva om hunden har några speciella kännetecken, tex tigrerad eller vit prick på huvudet."
+          }
+        }
+    	}, {
+      	"id" : "text3",
+        "name" : "text3",
+        "label" : "Ras",
+        "placeholder" : "Placeholder Text",
+        "described-by" : "description-1",
+        "labelled-by" : "text-label-1"
+    	}, {
+      	"id" : "text4",
+        "name" : "text4",
+        "label" : "Teckning",
+        "helptext" : {
+          "excerpt" : {
+            "tiny" : "Här kan du skriva om hunden har några speciella kännetecken, tex tigrerad eller vit prick på huvudet."
+          }
+        },
+        "placeholder" : "Placeholder Text",
+        "described-by" : "description-1",
+        "labelled-by" : "text-label-1"
+    	}, {
+      	"id" : "text5",
+        "name" : "text5",
+        "label" : "Födelsedatum",
+        "placeholder" : "Placeholder Text",
+        "described-by" : "description-1",
+        "labelled-by" : "text-label-1",
+        "field-description" : {
+          "excerpt" : {
+            "tiny" : "YYY-MM-DD"
+          }
+        }
+    	}
+  	]
+	}
+}
