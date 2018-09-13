@@ -267,5 +267,10 @@
       	"text" : "Data"
     	}
   	]
+	},
+	"sample-form" : {
+  	"textfields" : [
+    	{}, {}, {}, {}
+  	]
 	}
 }
