@@ -2,4 +2,12 @@
        name="{{ name }}" 
        type="radio" 
        value="{{ value }}"
-       {{#checked }}checked="checked"{{/checked }} />
+       {{#checked }}
+       checked="checked"
+       aria-checked="true"
+       {{/checked }} 
+       {{^checked}}
+       aria-checked="false"
+       {{/checked}}
+       role="radio"
+       tabindex="{{ tabindex }}" />

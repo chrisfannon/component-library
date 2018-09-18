@@ -146,36 +146,48 @@
         "checked" : false
       }
     ],
-    "radioList" : [
-      {
-        "id" : "radio1",
-        "name" : "radio",
-        "value" : "test-value",
-        "label" : "Option 1",
-        "checked" : false
-      },
-      {
-        "id" : "radio2",
-        "name" : "radio",
-        "value" : "test-value",
-        "label" : "Option 2",
-        "checked" : false
-      },
-      {
-        "id" : "radio3",
-        "name" : "radio",
-        "value" : "test-value",
-        "label" : "Option 3",
-        "checked" : false
-      },
-      {
-        "id" : "radio4",
-        "name" : "radio",
-        "value" : "test-value",
-        "label" : "Option 4",
-        "checked" : false
-      }
-    ],
+    "radioList" : {
+      "aria-id" : "radio-heading-id",
+      "id" : "radio-heading-id",
+      "radios" : [
+        {
+          "id" : "radio1",
+          "for" : "radio1",
+          "name" : "radio",
+          "value" : "test-value",
+          "label" : "Option 1",
+          "checked" : true,
+          "tabindex" : "0"
+        },
+        {
+          "id" : "radio2",
+          "for" : "radio2",
+          "name" : "radio",
+          "value" : "test-value",
+          "label" : "Option 2",
+          "checked" : false,
+          "tabindex" : "-1"
+        },
+        {
+          "id" : "radio3",
+          "for" : "radio3",
+          "name" : "radio",
+          "value" : "test-value",
+          "label" : "Option 3",
+          "checked" : false,
+          "tabindex" : "-1"
+        },
+        {
+          "id" : "radio4",
+          "for" : "radio4",
+          "name" : "radio",
+          "value" : "test-value",
+          "label" : "Option 4",
+          "checked" : false,
+          "tabindex" : "-1"
+        }
+      ]
+    },
     "description" : {
       "id" : "description-1"
     },
