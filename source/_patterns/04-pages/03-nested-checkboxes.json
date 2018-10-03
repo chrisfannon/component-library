@@ -1,0 +1,84 @@
+{
+  "sample-form" : {
+  	"fields" : {
+    	"checkboxList" : {
+      "smallHeading" : true,
+      "label" : "Small label for the radio group",
+      "aria-id" : "radio-heading-id",
+      "id" : "radio-heading-id",
+      "checkboxes" : [
+        {
+          "id" : "checkbox1",
+          "for" : "checkbox1",
+          "tabindex" : "0",
+          "name" : "checkbox1",
+          "label" : "Checkbox Option 1",
+          "checked" : false
+        },
+        {
+          "id" : "checkbox2",
+          "for" : "checkbox2",
+          "tabindex" : "0",
+          "name" : "checkbox2",
+          "label" : "Checkbox Option 2",
+          "checked" : false,
+          "sublist" : [
+            {
+              "fields" : {
+                "checkbox" : {
+                  "id" : "subcheckbox1",
+                  "for" : "subcheckbox1",
+                  "tabindex" : "0",
+                  "name" : "subcheckbox1",
+                  "label" : "Sub Checkbox Option 1",
+                  "checked" : false
+                }
+              } 
+            },
+            {
+              "fields" : {
+                "checkbox" : {
+                "id" : "subcheckbox2",
+                "for" : "subcheckbox2",
+                "tabindex" : "0",
+                "name" : "subcheckbox2",
+                "label" : "Sub Checkbox Option 2",
+                "checked" : false
+                }
+              }
+            },
+            {
+              "fields" : {
+                "checkbox" : {
+                "id" : "subcheckbox3",
+                "for" : "subcheckbox3",
+                "tabindex" : "0",
+                "name" : "subcheckbox3",
+                "label" : "Sub Checkbox Option 3",
+                "checked" : false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id" : "checkbox3",
+          "for" : "checkbox3",
+          "tabindex" : "0",
+          "name" : "checkbox3",
+          "label" : "Checkbox Option 3",
+          "checked" : false
+        },
+        {
+          "id" : "checkbox4",
+          "for" : "checkbox4",
+          "tabindex" : "0",
+          "name" : "checkbox4",
+          "label" : "Checkbox Option 4",
+          "checked" : false
+        }
+      ]
+    },
+  	}
+	}
+}

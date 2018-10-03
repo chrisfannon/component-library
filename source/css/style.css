@@ -286,10 +286,9 @@ input[type='month']:focus,
 input[type='week']:focus,
 input[type='number']:focus,
 textarea:focus {
-  background-color: #e8f4fc;
-  border-color: #116fa2;
-  box-shadow: inset 0px -3px 0px 0 #62b5e5;
-  color: #116fa2;
+  background-color: #eaf7c6;
+  border-color: #587604;
+  box-shadow: inset 0px -4px 0px 0 #84bd00;
 }
 
 label {
@@ -345,6 +344,12 @@ textarea {
 
 .clearfix:after {
   clear: both;
+}
+
+.c-list--minimal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .text--xs {
@@ -507,18 +512,25 @@ textarea {
   transition: all .3s ease-out;
 }
 .c-field input {
-  margin: 0 0 0.4rem 0;
+  position: relative;
+  transition: all .2s ease-out;
+  z-index: 20;
 }
 .c-field p {
   font-size: 1.11111rem;
   line-height: 1.5;
   transition: all .3s ease-out;
 }
+.c-field__wrapper {
+  margin: 0 0 0.4rem 0;
+  position: relative;
+  width: 100%;
+}
 .c-field.focused label {
-  color: #074567;
+  color: #587604;
 }
 .c-field.focused p {
-  color: #116fa2;
+  color: #587604;
 }
 .c-field--error label,
 .c-field--error p {
@@ -527,13 +539,41 @@ textarea {
 .c-field--error input {
   background-color: #f2c3be;
   border-color: #bf3c30;
+  width: calc( 100% - 54px );
+}
+.c-field--error .c-field__wrapper {
+  background-color: #bf3c30;
+}
+.c-field--error .c-field__wrapper:after {
+  content: "\f00d";
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  margin: 0 0 0 1.6rem;
+  position: absolute;
+  right: 1.9rem;
+  top: 1.6rem;
 }
 .c-field--success label {
   color: #37761e;
 }
 .c-field--success input {
-  backgorund-color: #d7e7d1;
-  border-color: #37761e;
+  width: calc( 100% - 54px );
+  background-color: #d7e7d1;
+  border-color: #84bd00;
+}
+.c-field--success .c-field__wrapper {
+  background-color: #84bd00;
+}
+.c-field--success .c-field__wrapper:after {
+  content: "\f00c";
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  margin: 0 0 0 1.6rem;
+  position: absolute;
+  right: 1.9rem;
+  top: 1.6rem;
 }
 [type="checkbox"],
 [type="radio"] {
@@ -541,16 +581,12 @@ textarea {
   position: absolute;
   top: -999px;
 }
-[type="checkbox"]:focus + label,
-[type="radio"]:focus + label {
-  background-color: #b6dffa;
-}
 [type="checkbox"] + label,
 [type="radio"] + label {
   padding: 0.8rem 1.6rem;
   display: inline-block;
   transition: all .2s ease-out;
-  width: 100%;
+  position: relative;
 }
 [type="checkbox"] + label:hover,
 [type="radio"] + label:hover {
@@ -560,17 +596,13 @@ textarea {
 [type="radio"] + label:before {
   margin: 0 0.8rem 0 0;
   box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #4d4d4d;
+  border: 0.6rem solid #fff;
+  box-shadow: 0px 0px 0px 1px #4d4d4d;
   content: " ";
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
-  transition: all .2s ease-out;
-}
-[type="checkbox"]:checked + label,
-[type="radio"]:checked + label {
-  background-color: #cae778;
+  transition: all .2s ease-out .1s;
 }
 [type="checkbox"]:checked + label:hover,
 [type="radio"]:checked + label:hover {
@@ -579,8 +611,18 @@ textarea {
 [type="checkbox"]:checked + label:before,
 [type="radio"]:checked + label:before {
   background-color: #84bd00;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   box-shadow: 0px 0px 0px 1px #587604;
+  animation: shrink-bounce 0.2s cubic-bezier(0.4, 0, 0.23, 1);
+}
+[type="checkbox"] + label:after {
+  content: "\f00c";
+  font-family: 'Font Awesome 5 Free';
+  top: 1.2rem;
+  left: 1.8rem;
+  position: absolute;
+  font-size: 0.8rem;
+  color: #fff;
 }
 [type="radio"] + label:before {
   border-radius: 0.6rem;
@@ -598,6 +640,21 @@ textarea {
 }
 .c-field label + p {
   margin: 0 0 0.8rem 0;
+}
+
+@keyframes shrink-bounce {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.833);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.c-field--nested > [type="checkbox"]:first-child:checked {
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

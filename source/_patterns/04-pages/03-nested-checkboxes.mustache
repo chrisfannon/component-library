@@ -1,0 +1,19 @@
+<section>
+  <ul>
+    {{# sample-form.fields.checkboxList.checkboxes }}
+    <li {{# sublist }}class="c-field--nested"{{/ sublist }}>
+      {{> components-checkbox }}
+      {{# sublist }}
+        <ul>
+          <li>{{> components-checkbox }}</li>
+          <li>{{> components-checkbox }}</li>
+          <li>{{> components-checkbox }}</li>
+          <li>{{> components-checkbox }}</li>
+        </ul>
+      {{/ sublist }}
+    </li>
+    {{/ sample-form.fields.checkboxList.checkboxes }}
+  </ul>
+</section>
+
+{{> elements-button--primary}}

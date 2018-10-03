@@ -1,6 +1,9 @@
 <div class="c-field {{ styleModifier }}">
   {{> elements-label }}
   {{# helptext }}{{> components-helptext }}{{/ helptext }}
+  <div class="c-field__wrapper">
   {{> elements-text-field }}
-  {{# field-description }}{{> components-description }}{{/ field-description }}
+  </div>
+  {{# fields.field-description }}{{> components-description }}{{/ fields.field-description }}
+  {{> components-description }}
 </div>

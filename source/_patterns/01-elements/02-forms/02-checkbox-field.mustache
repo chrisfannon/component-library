@@ -1,4 +1,12 @@
 <input id="{{ id }}" 
        name="{{ name }}" 
        type="checkbox" 
-       {{#  checked }}checked="checked"{{/ checked }} />
+       {{#  checked }}
+        checked="checked"
+        aria-checked="true"
+        {{/ checked }}
+        {{^ checked }}
+        aria-checked="false"
+        {{/checked}}
+       role="checkbox"
+       tabindex="0" />
