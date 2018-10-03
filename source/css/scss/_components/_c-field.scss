@@ -12,19 +12,27 @@ $base: '.c-field';
     @include sg-u-transition--m;
   } 
   input {
-    @include sg-u-space-stack--xs;
+    position: relative;
+    transition: all .2s ease-out;
+    z-index: 20;
   }
   p {
    @include sg-u-text--xs; 
    @include sg-u-transition--m;
   }
+  @at-root #{&}__wrapper {
+    @include sg-u-space-stack--xs;
+    
+    position: relative;
+    width: 100%;
+  }
   
   &.focused {
     label {
-      color: $sg-color__blue--700;
+      color: $sg-color__green--600;
     }
     p {
-      color: $sg-color__blue--600;
+      color: $sg-color__green--600;
     }
   }
   
@@ -36,6 +44,21 @@ $base: '.c-field';
     input {
       background-color: $sg-color__system--error--light;
       border-color: $sg-color__system--error;
+      width: calc( 100% - 54px );
+    }
+    .c-field__wrapper {
+      background-color: $sg-color__system--error;
+       
+      &:after {
+        content: "\f00d";
+        color: $sg-color__grayscale--000;
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        margin: 0 0 0 1.6rem;
+        position: absolute;
+        right: 1.9rem;
+        top: 1.6rem;
+      }
     }
   }
   
@@ -44,8 +67,24 @@ $base: '.c-field';
       color: $sg-color__system--success;
     }
     input {
-      backgorund-color: $sg-color__system--success--light;
-      border-color: $sg-color__system--success;
+      width: calc( 100% - 54px );
+      background-color: $sg-color__system--success--light;
+      //border-color: $sg-color__system--success;
+      border-color: $sg-color__green--500;
+    }
+    .c-field__wrapper {
+      background-color: $sg-color__green--500;
+       
+      &:after {
+        content: "\f00c";
+        color: $sg-color__grayscale--000;
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        margin: 0 0 0 1.6rem;
+        position: absolute;
+        right: 1.9rem;
+        top: 1.6rem;
+      }
     }
   }
   
@@ -55,13 +94,15 @@ $base: '.c-field';
     position: absolute;
     top: -999px;
     &:focus + label {
-      background-color: $sg-color__blue--400;
+      //background-color: $sg-color__blue--400;
     }
     & + label {
       @include sg-u-space-squish--m( 'padding' );
       display: inline-block;
+      //display: inline;
       transition: all .2s ease-out;
-      width: 100%;
+      position: relative;
+      //width: 100%;
       &:hover {
         background-color: $sg-color__blue--400;
       }
@@ -79,18 +120,37 @@ $base: '.c-field';
       }
     }
     &:checked + label {
-      background-color: $sg-color__green--400;
+      //background-color: $sg-color__green--400;
       
       &:hover {
         background-color: $sg-color__green--500;
       }
       &:before {
         background-color: $sg-color__green--500;
-        border: 2px solid $sg-color__grayscale--000;
+        border: 1px solid $sg-color__grayscale--000;
         box-shadow: 0px 0px 0px 1px $sg-color__green--600;
+        animation: shrink-bounce 0.2s cubic-bezier( .4, 0, .23, 1 );
       }
     }
+    &:checked:focus + label {
+      //background-color: $sg-color__green--500;
+    }
   }
+  
+  @at-root [type="checkbox"] {
+    & + label {
+      &:after {
+        content: "\f00c";
+        font-family: 'Font Awesome 5 Free';
+        top: 1.2rem;
+        left: 1.8rem;
+        position: absolute;
+        font-size: 0.8rem;
+        color: $sg-color__grayscale--000;        
+      }
+      }
+  }
+  
   @at-root [type="radio"] {
     & + label {
       &:before {
@@ -122,5 +182,17 @@ $base: '.c-field';
   
   @at-root #{&} label + p {
     @include sg-u-space-stack--s;
+  }
+}
+
+@keyframes shrink-bounce {
+  0% {
+    transform: scale( 1 );
+  }
+  33% {
+    transform: scale( .833 );
+  }
+  100% {
+    transform: scale( 1 );
   }
 }

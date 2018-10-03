@@ -1,3 +1,17 @@
-{{#fields.checkboxList}}
-{{> elements-checkbox-field}}{{> elements-label:radio1}}
-{{/fields.checkboxList}}
+{{# fields.checkboxList }}
+{{# smallHeading }}
+{{> elements-label }}
+{{/ smallHeading }}
+{{^ smallHeading }}
+{{> elements-heading--xs }}
+{{/ smallHeading }}
+<fieldset role="group" aria-labelled-by="{{ aria-id }}">
+  <ul class="c-list--minimal">
+    {{#fields.checkboxList.checkboxes }}
+      <li>
+        {{> elements-checkbox-field}}{{> elements-label:radio1}}
+      </li>
+    {{/fields.checkboxList.checkboxes }}
+  </ul>
+</fieldset>
+{{/ fields.checkboxList }}

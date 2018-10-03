@@ -111,32 +111,44 @@
         "checked" : false
       }
     ],
-    "checkboxList" : [
-      {
-        "id" : "checkbox1",
-        "name" : "checkbox1",
-        "label" : "Checkbox Option 1",
-        "checked" : false
-      },
-      {
-        "id" : "checkbox2",
-        "name" : "checkbox2",
-        "label" : "Checkbox Option 2",
-        "checked" : false
-      },
-      {
-        "id" : "checkbox3",
-        "name" : "checkbox3",
-        "label" : "Checkbox Option 3",
-        "checked" : false
-      },
-      {
-        "id" : "checkbox4",
-        "name" : "checkbox4",
-        "label" : "Checkbox Option 4",
-        "checked" : false
-      }
-    ],
+    "checkboxList" : {
+      "aria-id" : "radio-heading-id",
+      "id" : "radio-heading-id",
+      "checkboxes" : [
+        {
+          "id" : "checkbox1",
+          "for" : "checkbox1",
+          "tabindex" : "0",
+          "name" : "checkbox1",
+          "label" : "Checkbox Option 1",
+          "checked" : false
+        },
+        {
+          "id" : "checkbox2",
+          "for" : "checkbox2",
+          "tabindex" : "0",
+          "name" : "checkbox2",
+          "label" : "Checkbox Option 2",
+          "checked" : false
+        },
+        {
+          "id" : "checkbox3",
+          "for" : "checkbox3",
+          "tabindex" : "0",
+          "name" : "checkbox3",
+          "label" : "Checkbox Option 3",
+          "checked" : false
+        },
+        {
+          "id" : "checkbox4",
+          "for" : "checkbox4",
+          "tabindex" : "0",
+          "name" : "checkbox4",
+          "label" : "Checkbox Option 4",
+          "checked" : false
+        }
+      ]
+    },
     "radios" : [
       {
         "id" : "radio1",
@@ -196,7 +208,8 @@
       "name" : "text1",
       "placeholder" : "Placeholder Text",
       "described-by" : "description-1",
-      "labelled-by" : "text-label-1"
+      "labelled-by" : "text-label-1",
+      "field-description" : "Description text"
     },
     "textarea" : {
       "id" : "field-1",

@@ -1,8 +1,12 @@
 {{# fields.radioList}}
 <fieldset role="radiogroup" aria-labelled-by="{{ aria-id }}">
-{{> elements-heading--m }}
-  {{#fields.radioList.radios }}
-  {{> elements-radio-button-field}}{{> elements-label:radio1}}
-  {{/fields.radioList.radios }}
+{{> elements-heading--xs }}
+  <ul class="c-list--minimal">
+    {{#fields.radioList.radios }}
+      <li>
+        {{> elements-radio-button-field}}{{> elements-label:radio1}}
+      </li>
+    {{/fields.radioList.radios }}
+  </ul>
 </fieldset>
 {{/ fields.radioList }}

@@ -134,10 +134,10 @@ input[type='month']:focus,
 input[type='week']:focus,
 input[type='number']:focus,
 textarea:focus {
-  background-color: $sg-color__blue--300;
-  border-color: $sg-color__blue--600;
-  box-shadow: inset 0px -3px 0px 0 $sg-color__blue--500;
-  color: $sg-color__blue--600;
+  background-color: $sg-color__green--300;
+  border-color: $sg-color__green--600;
+  box-shadow: inset 0px -4px 0px 0 $sg-color__green--500;
+  //color: $sg-color__blue--600;
 }
 
 label {
@@ -217,4 +217,11 @@ table {
 
 .clearfix:after {
     clear: both;
+}
+
+// Scratch
+.c-list--minimal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
