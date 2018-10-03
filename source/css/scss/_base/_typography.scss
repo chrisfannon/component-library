@@ -12,6 +12,14 @@
 // Style Guide: Base.Typography
 
 //	DEFAULTS (~defaults)
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+
+}
+
 h1,
 .text__heading--xl {
   @extend %sg-heading--xl;

@@ -103,6 +103,7 @@ module.exports = function (grunt) {
     watch: {
       all: {
         files: [
+          path.resolve(paths().source.css + '**/*.scss'),
           path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
           path.resolve(paths().source.patterns + '**/*'),
@@ -112,7 +113,7 @@ module.exports = function (grunt) {
           path.resolve(paths().source.js + '/*.js'),
           path.resolve(paths().source.root + '/*.ico')
         ],
-        tasks: ['default', 'bsReload:css']
+        tasks: ['default', 'sass', 'bsReload:css']
       }
     },
     browserSync: {
