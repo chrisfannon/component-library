@@ -158,6 +158,11 @@ table {
   @extend %table-template;
 }
 
+// Reset browser defaults
+figure {
+  margin: 0;
+}
+
 //	Helper classes
 // Hide from both screenreaders and browsers: h5bp.com/u
 

@@ -1,0 +1,51 @@
+$base: '.c-block';
+
+#{ $base } { 
+  
+  @at-root #{&}--inset {
+    border: 1px solid $sg-color__grayscale--020;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover,
+    &:focus {
+      #{$base}--inset__content {
+        @include sg-u-space-stretch--m( 'padding' );
+      }
+    }
+    
+    @at-root #{&}__img {
+      background-color: $sg-color__grayscale--000;
+      position: relative;
+    }
+    
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    
+    @at-root #{&}__content {
+      @include sg-u-space-inset--m( 'padding' );
+      @include sg-u-text--xs;
+      
+      align-items: center;
+      background-color: rgba( 0, 0, 0, .7 );
+      bottom: 0;
+      color: $sg-color__grayscale--000;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      left: 0;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+      
+      i {
+        @include sg-u-space-inline--s;
+        @include sg-u-text--m;
+      }
+    }
+  }
+
+}

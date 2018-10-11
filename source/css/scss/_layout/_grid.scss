@@ -1,0 +1,24 @@
+$base: ".l-grid";
+
+#{ $base } {
+  display: flex;
+  
+  @at-root #{&}--3-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    > div {
+      flex: 0 1 32.9%;
+      margin-bottom: 0.8rem;
+    } 
+    > div:nth-child(n+1) {
+      margin-left: 0.4rem;
+    }
+    > div:nth-child( 3n+2 ) {
+      margin: 0 0.4rem;
+    }
+    > div:nth-child( 3n+1 ) {
+      @include sg-u-space-inline--xs;
+    }
+  }
+}

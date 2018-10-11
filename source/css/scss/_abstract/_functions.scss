@@ -45,6 +45,8 @@
     @return $font-size__base * 2
   } @else if $size == 'xl' {
     @return $font-size__base * 4
+  } @else if $size == 'xxl' {
+    @return $font-size__base * 6
   } @else if $size == 'xxs' {
     @return $font-size__base / 8
   } @else {
@@ -114,6 +116,10 @@
       @return #{spacing-size( 'm' )} #{ spacing-size( $size )}
     } @else if $size == 'm' {
       @return #{spacing-size( 'l' )} #{spacing-size( $size )}
+    } @else if $size == 'l' {
+      @return #{spacing-size( 'xl' )} #{spacing-size( $size )}
+    } @else if $size == 'xl' {
+      @return #{spacing-size( 'xxl' )} #{spacing-size( $size )}
     }
   }
   @if $type == 'inline' {

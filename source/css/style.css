@@ -303,6 +303,10 @@ textarea {
   resize: vertical;
 }
 
+figure {
+  margin: 0;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -360,6 +364,27 @@ body {
 .text--xs {
   color: inherit;
   line-height: inherit;
+}
+
+.l-grid {
+  display: flex;
+}
+.l-grid--3-col {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.l-grid--3-col > div {
+  flex: 0 1 32.9%;
+  margin-bottom: 0.8rem;
+}
+.l-grid--3-col > div:nth-child(n+1) {
+  margin-left: 0.4rem;
+}
+.l-grid--3-col > div:nth-child(3n+2) {
+  margin: 0 0.4rem;
+}
+.l-grid--3-col > div:nth-child(3n+1) {
+  margin: 0 0.4rem 0 0;
 }
 
 .c-button--primary {
@@ -658,6 +683,45 @@ body {
     transform: scale(1);
   }
 }
+.c-block--inset {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.c-block--inset:hover .c-block--inset__content, .c-block--inset:focus .c-block--inset__content {
+  padding: 3.2rem 1.6rem;
+}
+.c-block--inset__img {
+  background-color: #fff;
+  position: relative;
+}
+.c-block--inset img {
+  height: auto;
+  max-width: 100%;
+}
+.c-block--inset__content {
+  padding: 1.6rem;
+  font-size: 1.11111rem;
+  line-height: 1.5;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  left: 0;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.c-block--inset__content i {
+  margin: 0 0.8rem 0 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 .c-field--nested > [type="checkbox"]:first-child:checked {
   background-color: red;
 }

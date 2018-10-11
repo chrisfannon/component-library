@@ -354,6 +354,13 @@
 //
 // Style Guide Mixins.Spacing.Stretch
 
+// sg-u-space-stretch--xl
+//
+// Style Guide Mixins.Spacing.Stretch.l
+@mixin sg-u-space-stretch--xl( $type: 'margin' ) {
+  #{$type}: space( 'stretch', 'xl' );
+}
+
 // sg-u-space-stretch--l
 //
 // Style Guide Mixins.Spacing.Stretch.l
