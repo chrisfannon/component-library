@@ -357,6 +357,32 @@ textarea {
   line-height: inherit;
 }
 
+.c-breadcrumb {
+  font-size: 1.33333rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.c-breadcrumb i {
+  font-size: 1.11111rem;
+  line-height: 1.5;
+}
+.c-breadcrumb a {
+  padding: 0.4rem 0.8rem;
+  display: block;
+  transition: all .2s ease-out;
+}
+.c-breadcrumb a:hover {
+  background-color: #fff;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+.c-breadcrumb .last {
+  padding-left: 0.8rem;
+}
+
 .c-button--primary {
   font-size: 1.6rem;
   line-height: 1.5;
