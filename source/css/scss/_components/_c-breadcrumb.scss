@@ -1,0 +1,30 @@
+$base: ".c-breadcrumb";
+
+#{ $base } {
+  @include sg-u-text--s;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  
+  i {
+    @include sg-u-text--xs;
+  }
+  
+  a {
+    @include sg-u-space-squish--s( 'padding' );
+    display: block;
+    transition: all .2s ease-out;
+    
+    &:hover {
+      background-color: $sg-color__grayscale--000;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }  
+  .last {
+    //@include sg-u-space-inline--s( 'padding' );
+    padding-left: spacing-size( 's' );
+  }
+}

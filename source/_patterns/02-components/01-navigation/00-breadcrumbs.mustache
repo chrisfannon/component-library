@@ -1,0 +1,19 @@
+<nav class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+{{# breadcrumbs }}
+  {{^ class }}
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a href="{{ href }}" itemprop="url">
+      <span itemprop="title">{{ text }}</span>
+    </a>
+    <meta itemprop="position" content="{{ position }}" />
+  </span>
+  <i class="fas fa-arrow-right" aria-hidden></i>
+  {{/ class }}
+  {{# class }}
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="{{ class }}">
+    <span itemprop="title">{{ text }}</span>
+    <meta itemprop="position" content="{{ position }}" />
+  </span>
+  {{/ class }}
+{{/ breadcrumbs }}
+</nav>

@@ -300,5 +300,28 @@
 	},
 	"list--block-inset" : [
   	{}, {}, {}, {}, {}, {}
+  ],
+	"breadcrumbs" : [
+  	{
+    	"href" : "#",
+    	"text" : "root item",
+    	"position" : "1"
+  	},
+  	{
+    	"href" : "#",
+    	"text" : "level one",
+    	"position" : "2"
+  	},
+  	{
+    	"href" : "#",
+    	"text" : "level two",
+    	"position" : "3"
+  	},
+  	{
+    	"href" : "#",
+    	"text" : "level three",
+    	"position" : "4",
+    	"class" : "last"
+  	}
 	]
 }
