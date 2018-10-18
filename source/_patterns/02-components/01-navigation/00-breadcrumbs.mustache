@@ -1,4 +1,4 @@
-<nav class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav class="c-breadcrumb" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 {{# breadcrumbs }}
   {{^ class }}
   <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -11,7 +11,7 @@
   {{/ class }}
   {{# class }}
   <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="{{ class }}">
-    <span itemprop="title">{{ text }}</span>
+    <span itemprop="title" aria-current="page">{{ text }}</span>
     <meta itemprop="position" content="{{ position }}" />
   </span>
   {{/ class }}
