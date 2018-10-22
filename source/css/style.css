@@ -188,6 +188,7 @@ table th:last-child {
 
 a {
   text-decoration: underline;
+  transition: all .2s ease-in-out;
 }
 a:link {
   color: #116fa2;
@@ -196,10 +197,24 @@ a:visited {
   color: #587604;
 }
 a:hover {
+  background-color: rgba(0, 0, 0, 0.08);
   color: #a24a0f;
 }
 a:active {
   color: #116fa2;
+}
+a.reversed:link {
+  color: #b6dffa;
+}
+a.reversed:visited {
+  color: #cae778;
+}
+a.reversed:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e0a430;
+}
+a.reversed:active {
+  color: #b6dffa;
 }
 
 html {

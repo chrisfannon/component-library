@@ -20,6 +20,7 @@
 
 a {
 	text-decoration: underline;
+	transition: all .2s ease-in-out;
 	&:link {
   	color: $sg-color__blue--600;
 	}
@@ -27,10 +28,27 @@ a {
   	color: $sg-color__green--600;
 	}
 	&:hover {
+  	background-color: rgba( $sg-color__grayscale--100, .08 );
   	color: $sg-color__other--001;
 	}
 	&:active {
 		color: $sg-color__blue--600;
+	}
+	
+	&.reversed {
+  	&:link {
+    	color: $sg-color__blue--400;
+  	}
+  	&:visited {
+    	color: $sg-color__green--400;
+  	}
+  	&:hover {
+    	background-color: rgba( $sg-color__grayscale--100, .5 );
+    	color: $sg-color__other--002;
+  	}
+  	&:active {
+    	color: $sg-color__blue--400;
+  	}
 	}
 }
 
