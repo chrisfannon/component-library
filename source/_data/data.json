@@ -40,6 +40,7 @@
     "url" : "http://www.google.com",
     "title" : "We are good at accessbility"
   },
+  "quoteText" : "This is some quote text. It's not <em>often</em> used, but it can be quite impactful when used appropratiely. <strong>Inline HTML elements</strong> can be included within the quote text.",
   "name": {
     "first": "Junius",
     "firsti": "J",

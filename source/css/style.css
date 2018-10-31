@@ -322,6 +322,10 @@ figure {
   margin: 0;
 }
 
+mark {
+  background-color: #cae778;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
