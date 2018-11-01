@@ -257,8 +257,14 @@
   "labels" : {
   	"short" : "label",
   	"medium" : "My Label",
-  	"long" : "Labels and Things"
+  	"long" : "Labels and Things",
+  	"primary" : "Primär",
+  	"secondary" : "Sekundär",
+  	"compact" : "Kompakt",
+  	"link" : "Länk"
 	},
+	"secondary" : "Sekundär",
+	"compact" : "Kompakt",
 	"table" : {
   	"headers" : [
     	{

@@ -1,25 +1,41 @@
 $base: '.c-button';
 
 #{ $base } {
+  
+  border-radius: 3px;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  flex: 0 1 auto;
+  transition: all .1s ease-out;
+  
   @at_root #{&}--primary {
     @include sg-u-text--m;
     @include sg-u-space-squish--l( 'padding' );
     @include sg-u-space-stack--l;
     background-color: $sg-color__blue--600;
     border: none;
-    border-radius: 3px;
     box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.3);
     color: $sg-color__grayscale--000;
-    display: block;
     font-weight: bold;
-    //padding: 1.6rem 3.2rem;
-    text-decoration: none;
-    //margin-bottom: 3.2rem;
-    flex: 0 1 auto;
-    transition: all .2s ease-out;
     &:hover {
-      background-color: $sg-color__blue--500;
-      box-shadow: 1px 1px 2px 0px rgba( 0,0,0,0.5);
+      background-color: lighten( $sg-color__blue--600, 4% );
+      box-shadow: 1px 1px 3px 0px rgba( 0,0,0,0.4);
+      cursor: pointer;
+      transform-origin: center;
+      transform: translate( -1px, -1px );
+    }
+    
+    &.disabled {
+      background-color: $sg-color__grayscale--020;
+      box-shadow: none;
+      color: darken( $sg-color__grayscale--030, 15% );
+      &:hover {
+        background-color: $sg-color__grayscale--020;
+        box-shadow: none;
+        cursor: auto;
+        transform: none;
+      }
     }
   }
   @at_root #{&}--secondary {
@@ -28,60 +44,49 @@ $base: '.c-button';
     @include sg-u-space-stack--l;
     background-color: $sg-color__grayscale--000;
     border: 1px solid $sg-color__blue--600;
-    border-radius: 3px;
     box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.2);
     color: $sg-color__blue--600;
-    display: block;
-    font-weight: normal;
-    text-decoration: none;
-    flex: 0 1 auto;
-    transition: all .2s ease-out;
     &:hover {
       background-color: $sg-color__blue--300;
       box-shadow: 1px 1px 2px 0px rgba( 0,0,0,0.4);
+      cursor: pointer;
+      transform-origin: center;
+      transform: translate( -1px, -1px );
     }
-  }
-  @at_root #{&}--compact {
-    @include sg-u-text--s;
-    @include sg-u-space-squish--m( 'padding' );
-    @include sg-u-space-stack--l;
-    background-color: $sg-color__grayscale--000;
-    border: 1px solid $sg-color__blue--600;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.2);
-    color: $sg-color__blue--600;
-    display: block;
-    font-weight: normal;
-    text-decoration: none;
-    flex: 0 1 auto;
-    transition: all .2s ease-out;
-    &:hover {
-      background-color: $sg-color__blue--300;
-      box-shadow: 1px 1px 2px 0px rgba( 0,0,0,0.4);
+    
+    &.compact {
+      @include sg-u-text--s;
+      @include sg-u-space-squish--m( 'padding' );
+      &:hover {
+        transform: none;
+      }
     }
-  }
-  @at_root #{&}--tiny {
-    @include sg-u-text--xs;
-    @include sg-u-space-squish--s( 'padding' );
-    @include sg-u-space-stack--l;
-    background-color: $sg-color__grayscale--000;
-    border: 1px solid $sg-color__blue--600;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.2);
-    color: $sg-color__blue--600;
-    display: block;
-    font-weight: normal;
-    text-decoration: none;
-    flex: 0 1 auto;
-    transition: all .2s ease-out;
-    &:hover {
-      background-color: $sg-color__blue--300;
-      box-shadow: 1px 1px 2px 0px rgba( 0,0,0,0.4);
+    
+    &.tiny {
+      @include sg-u-text--xs;
+      @include sg-u-space-squish--s( 'padding' );
+      &:hover {
+        transform: none;
+      }
+    }
+    
+    &.disabled {
+      background-color: $sg-color__grayscale--005;
+      border-color: darken( $sg-color__grayscale--010, 15% );
+      box-shadow: none;
+      color: darken( $sg-color__grayscale--010, 15% );
+      &:hover {
+        background-color: $sg-color__grayscale--005;
+        box-shadow: none;
+        cursor: auto;
+        transform: none;
+      }
     }
   }
 }
 
 
+/*
 .c-button {
   
 }
@@ -141,3 +146,4 @@ $base: '.c-button';
   flex-direction: column;
   margin-bottom: 6.4rem;
 }
+*/

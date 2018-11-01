@@ -432,6 +432,14 @@ body {
   padding-left: 0.8rem;
 }
 
+.c-button {
+  border-radius: 3px;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  flex: 0 1 auto;
+  transition: all .1s ease-out;
+}
 .c-button--primary {
   font-size: 1.6rem;
   line-height: 1.5;
@@ -439,18 +447,27 @@ body {
   margin: 0 0 3.2rem 0;
   background-color: #116fa2;
   border: none;
-  border-radius: 3px;
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   color: #fff;
-  display: block;
   font-weight: bold;
-  text-decoration: none;
-  flex: 0 1 auto;
-  transition: all .2s ease-out;
 }
 .c-button--primary:hover {
-  background-color: #62b5e5;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  background-color: #137cb4;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform-origin: center;
+  transform: translate(-1px, -1px);
+}
+.c-button--primary.disabled {
+  background-color: #cccccc;
+  box-shadow: none;
+  color: #8d8d8d;
+}
+.c-button--primary.disabled:hover {
+  background-color: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+  transform: none;
 }
 .c-button--secondary {
   font-size: 1.6rem;
@@ -459,64 +476,53 @@ body {
   margin: 0 0 3.2rem 0;
   background-color: #fff;
   border: 1px solid #116fa2;
-  border-radius: 3px;
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
   color: #116fa2;
-  display: block;
-  font-weight: normal;
-  text-decoration: none;
-  flex: 0 1 auto;
-  transition: all .2s ease-out;
 }
 .c-button--secondary:hover {
   background-color: #e8f4fc;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform-origin: center;
+  transform: translate(-1px, -1px);
 }
-.c-button--compact {
+.c-button--secondary.compact {
   font-size: 1.33333rem;
   line-height: 1.5;
   padding: 0.8rem 1.6rem;
-  margin: 0 0 3.2rem 0;
-  background-color: #fff;
-  border: 1px solid #116fa2;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  color: #116fa2;
-  display: block;
-  font-weight: normal;
-  text-decoration: none;
-  flex: 0 1 auto;
-  transition: all .2s ease-out;
 }
-.c-button--compact:hover {
-  background-color: #e8f4fc;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+.c-button--secondary.compact:hover {
+  transform: none;
 }
-.c-button--tiny {
+.c-button--secondary.tiny {
   font-size: 1.11111rem;
   line-height: 1.5;
   padding: 0.4rem 0.8rem;
-  margin: 0 0 3.2rem 0;
-  background-color: #fff;
-  border: 1px solid #116fa2;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  color: #116fa2;
-  display: block;
-  font-weight: normal;
-  text-decoration: none;
-  flex: 0 1 auto;
-  transition: all .2s ease-out;
 }
-.c-button--tiny:hover {
-  background-color: #e8f4fc;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+.c-button--secondary.tiny:hover {
+  transform: none;
+}
+.c-button--secondary.disabled {
+  background-color: #f2f2f2;
+  border-color: silver;
+  box-shadow: none;
+  color: silver;
+}
+.c-button--secondary.disabled:hover {
+  background-color: #f2f2f2;
+  box-shadow: none;
+  cursor: auto;
+  transform: none;
 }
 
+/*
+.c-button {
+  
+}
 .c-button__primary {
   background-color: #116fa2;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.8);
   color: #fff;
   display: inline-block;
   font-size: 1.3rem;
@@ -527,7 +533,6 @@ body {
   flex: 0 1 auto;
   transition: all .2s ease-out;
 }
-
 .c-button__primary:hover {
   background-color: #5aa0c6;
 }
@@ -537,7 +542,6 @@ body {
   box-shadow: none;
   background-color: #ccc;
 }
-
 .c-button--disable:hover {
   border: 1px solid #999;
   background-color: #ccc;
@@ -548,7 +552,7 @@ body {
   background-color: #fff;
   border: 1px solid #116fa2;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.8);
+   box-shadow: 1px 1px 1px 0px rgba( 0,0,0,0.8);
   font-size: 1.3rem;
   font-weight: bold;
   padding: 1.6rem 3.2rem;
@@ -557,24 +561,21 @@ body {
   flex: 0 1 auto;
   transition: all .2s ease-out;
 }
-
 .c-button__secondary:hover {
-  background-color: #F0F7FC;
+  background-color: #F0F7FC
 }
-
 .c-button__link {
   font-size: 1.3rem;
   display: block;
   flex: 0 1 auto;
 }
-
 .c-button__group {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   margin-bottom: 6.4rem;
 }
-
+*/
 .c-field {
   align-items: flex-start;
   display: flex;
