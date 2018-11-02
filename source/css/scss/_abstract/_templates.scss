@@ -149,54 +149,78 @@
 //
 // Style Guide: Abstract.Templates.Base.table
 %table-template {
-  @include sg-u-space-stack--m;
-  @include sg-u-text--s;
+  @include sg-u-space-stack--l;
+  @include sg-u-text--m;
   
-  background-color: $sg-color__grayscale--000;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 100%;
   
-  thead {
-    tr {
-      border-bottom-color: $sg-color__grayscale--070;
-      &:hover {
-        background-color: transparent;
-      }
+  .align-right {
+    text-align: right;
+  }
+  .align-left {
+    text-align: left;
+  }
+  
+  caption {
+    @include sg-u-space-inset--s( 'padding' );
+    @extend %sg-text--m;
+    
+    border-top: 1px solid $sg-color__grayscale--070;
+    border-bottom: 1px solid $sg-color__grayscale--070;
+    color: $sg-color__blue--700;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  colgroup {
+    border-right: 1px solid $sg-color__grayscale--020;
+    
+    &:last-of-type {
+      border: none;
     }
   }
   
+  thead {
+    tr {
+      border-bottom: 1px solid $sg-color__grayscale--020;
+    }
+  }
+  
+  tbody {
+    tr {
+      &:nth-child( 2n + 1 ) {
+        td {
+          background-color: $sg-color__grayscale--010;
+        }
+      }
+    }
+    + tbody {
+      border-top: 1px solid $sg-color__grayscale--030;
+    }
+  }
+  
+  tfoot {
+    td {
+      border-top: 1px solid $sg-color__grayscale--070;
+      font-weight: bold;
+    }
+  }
   th {
-    @include sg-u-text--s;
-    @include sg-u-space-inset--xs( 'padding' );
-    
     font-weight: bold;
-    text-align: left;
-    
-    border-bottom: 1px solid $sg-color__grayscale--070;
-    padding-top: 3.2rem;
-    padding-left: 0;
-    margin-right: 2.0px;
   }
   
   tr {
-    border-bottom: 1px solid $sg-color__grayscale--020;
     transition: all .3s ease-out;
   }
-  tr:hover {
-    background-color: #EFF7DA;
-  }
   
-  td {
-    @include sg-u-space-inset--s( 'padding' );
-    padding-left: 0;
+  td, th {
+    @include sg-u-space-inset--m( 'padding' );
     
     word-wrap: normal;
   }
-  td {
-    border-bottom: 1px solid #ccc;
-    //padding: 0.8rem 1.6rem 0.8rem 0;
-  }
+  
+  /*
   td:first-child,
   th:first-child {
     padding-left: 3.2rem;
@@ -205,4 +229,5 @@
   th:last-child {
     padding-right: 3.2rem;
   }
+  */
 }

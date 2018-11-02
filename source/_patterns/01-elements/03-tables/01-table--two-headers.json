@@ -1,0 +1,46 @@
+{
+  "table" : {
+    "colHeaders" : [
+      {
+        "text" : ""
+      },
+      {
+        "text" : "Header 1"
+      },
+      {
+        "text" : "Header 2"
+      },
+      {
+        "text" : "Header 3"
+      },
+      {
+        "text" : "Header 4"
+      }
+    ],
+    "rows" : [
+      {}, {}, {}, {}
+    ],
+    "cells" : [
+      {
+        "text" : "Header 1",
+        "header" : true
+      },
+      {
+        "text" : "Cell 1",
+        "header" : false
+      },
+      {
+        "text" : "Cell 2",
+        "header" : false
+      },
+      {
+        "text" : "Cell 3",
+        "header" : false
+      },
+      {
+        "text" : "Cell 4",
+        "header" : false
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+<table>
+  <caption>Table with Two Headers</caption>
+  <colgroup>
+    <col />
+  </colgroup>
+  <colgroup>
+    {{# table.colHeaders }}
+      <col />
+    {{/ table.colHeaders }}
+  </colgroup>
+  <thead>
+    <tr>
+      {{# table.colHeaders }}
+      <th>{{ text }}</th>
+      {{/ table.colHeaders }}
+    </tr>
+  </thead>
+  <tbody>
+    {{# table.rows }}
+    <tr>
+      {{# table.cells }}
+        {{# header }}
+          <th>{{ text }}</th>
+        {{/ header }}
+        {{^ header }}
+          <td>{{ text }}</td>
+        {{/ header }}
+      {{/ table.cells }}
+    </tr>
+    {{/ table.rows }}
+  </tbody>
+</table>

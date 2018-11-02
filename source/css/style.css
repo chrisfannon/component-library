@@ -92,14 +92,14 @@ h6,
   }
 }
 
-body,
+table caption, body,
 .text--m {
   font-size: 1.92rem;
   line-height: 1.5;
   margin: 0 0 1.6rem 0;
 }
 @media (min-width: 80em) {
-  body,
+  table caption, body,
   .text--m {
     font-size: 1.6rem;
     line-height: 1.5;
@@ -133,53 +133,64 @@ small,
 }
 
 table {
-  margin: 0 0 1.6rem 0;
-  font-size: 1.33333rem;
+  margin: 0 0 3.2rem 0;
+  font-size: 1.6rem;
   line-height: 1.5;
-  background-color: #fff;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 100%;
+  /*
+  td:first-child,
+  th:first-child {
+    padding-left: 3.2rem;
+  }
+  td:last-child,
+  th:last-child {
+    padding-right: 3.2rem;
+  }
+  */
+}
+table .align-right {
+  text-align: right;
+}
+table .align-left {
+  text-align: left;
+}
+table caption {
+  padding: 0.8rem;
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
+  color: #074567;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+table colgroup {
+  border-right: 1px solid #cccccc;
+}
+table colgroup:last-of-type {
+  border: none;
 }
 table thead tr {
-  border-bottom-color: #4d4d4d;
+  border-bottom: 1px solid #cccccc;
 }
-table thead tr:hover {
-  background-color: transparent;
+table tbody tr:nth-child(2n + 1) td {
+  background-color: #e6e6e6;
+}
+table tbody + tbody {
+  border-top: 1px solid #b3b3b3;
+}
+table tfoot td {
+  border-top: 1px solid #4d4d4d;
+  font-weight: bold;
 }
 table th {
-  font-size: 1.33333rem;
-  line-height: 1.5;
-  padding: 0.4rem;
   font-weight: bold;
-  text-align: left;
-  border-bottom: 1px solid #4d4d4d;
-  padding-top: 3.2rem;
-  padding-left: 0;
-  margin-right: 2.0px;
 }
 table tr {
-  border-bottom: 1px solid #cccccc;
   transition: all .3s ease-out;
 }
-table tr:hover {
-  background-color: #EFF7DA;
-}
-table td {
-  padding: 0.8rem;
-  padding-left: 0;
+table td, table th {
+  padding: 1.6rem;
   word-wrap: normal;
-}
-table td {
-  border-bottom: 1px solid #ccc;
-}
-table td:first-child,
-table th:first-child {
-  padding-left: 3.2rem;
-}
-table td:last-child,
-table th:last-child {
-  padding-right: 3.2rem;
 }
 
 * {

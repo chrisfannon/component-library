@@ -1,0 +1,56 @@
+<table>
+  <caption>One Dimensional Table</caption>
+  <colgroup>
+    {{# table.headers }}
+      <col />
+    {{/ table.headers }}
+  </colgroup>
+  <thead>
+    <tr>
+      {{# table.headers }}
+      <th class="{{align}}">{{ text }}</th>
+      {{/ table.headers }}
+    </tr>
+  </thead>
+  <tbody>
+    {{# table.rows }}
+    <tr>
+      {{# table.cells }}
+      <td class="{{align}}">{{ text }}</td>
+      {{/ table.cells }}
+    </tr>
+    {{/ table.rows }}
+  </tbody>
+</table>
+
+<table>
+  <caption>One dimensional Table with Footer</caption>
+  <colgroup>
+    {{# table.headers }}
+      <col />
+    {{/ table.headers }}
+  </colgroup>
+  <thead>
+    <tr>
+      {{# table.headers }}
+        <th class="{{ align }}">{{text}}</th>
+      {{/ table.headers }}
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      {{# table.footer }}
+        <td class="{{ align }}">{{text}}</td>
+      {{/ table.footer }}
+    </tr>
+  </tfoot>
+  <tbody>
+    {{# table.rows }}
+    <tr>
+      {{# table.cells }}
+        <td class="{{ align }}">{{text}}</td>
+      {{/ table.cells }}
+    </tr>
+    {{/ table.rows }}
+  </tbody>
+</table>
