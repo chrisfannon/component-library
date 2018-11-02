@@ -1,1 +1,3 @@
-<a href="{{ link.url }}" title="{{ link.title }}" {{#link.reversed}}class="reversed"{{/link.reversed}}>{{ excerpt.short }}</a>
+{{# links }}
+<a href="{{ url }}" title="{{ title }}" class="{{# external }}external{{/ external }} {{# reversed}}reversed{{/ reversed }}">{{# link-icon }}<i class="fas {{ icon-id }}"></i>{{/ link-icon }}{{ text }}{{# link-meta }}<em>({{ type }} - {{ size }})</em>{{/ link-meta }}</a>
+{{/ links }}

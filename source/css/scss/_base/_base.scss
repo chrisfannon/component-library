@@ -50,6 +50,24 @@ a {
     	color: $sg-color__blue--400;
   	}
 	}
+  i {
+    margin-right: spacing-size( 's' );
+  }
+  em {
+    @include sg-u-text--xs;
+    margin-left: spacing-size( 's' );
+  }
+	&.external:after {
+  	@include sg-u-text--xs;
+  	
+  	bottom: 1px;
+  	content: "\f35d";
+  	font-family: $icon-font; 
+  	font-weight: 900;
+  	margin-left: spacing-size( 's' );
+  	padding-right: spacing-size( 's' );
+  	position: relative;
+	}
 }
 
 //	HTML5 Boilerplate

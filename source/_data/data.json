@@ -36,10 +36,22 @@
   },
   "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
   "url": "http://lorizzle.nl/",
-  "link" : {
-    "url" : "http://www.google.com",
-    "title" : "We are good at accessbility"
-  },
+  "links" : [ 
+    {
+      "url" : "http://www.google.com",
+      "title" : "We are good at accessbility",
+      "text" : "This is the sample link text",
+      "external" : false,
+      "reversed" : false,
+      "link-icon" : {
+        "icon-id" : "fa-file-pdf"
+      },
+      "link-meta" : {
+        "type" : "pdf",
+        "size" : "26.5kb"
+      }
+    }
+  ],
   "quoteText" : "This is some quote text. It's not <em>often</em> used, but it can be quite impactful when used appropratiely. <strong>Inline HTML elements</strong> can be included within the quote text.",
   "name": {
     "first": "Junius",
@@ -369,66 +381,123 @@
 	],
 	"list--links" : [
   	{
-    	"link" : {
-        "url" : "http://www.google.com",
-        "title" : "We are good at accessbility",
-        "text" : "My link text"
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "This is the sample link text",
+          "external" : false,
+          "reversed" : false
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://www.aftonbladet.se",
-        "title" : "We are good at accessbility",
-        "text" : "My link text"
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "A link to an external file",
+          "external" : true,
+          "reversed" : false,
+          "link-icon" : {
+            "icon-id" : "fa-file-pdf"
+          },
+          "link-meta" : {
+            "type" : "pdf",
+            "size" : "26.5kb"
+          }
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://www.sweden.se",
-        "title" : "We are good at accessbility",
-        "text" : "My link text"
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "A link to an internal file",
+          "external" : false,
+          "reversed" : false,
+          "link-icon" : {
+            "icon-id" : "fa-file-pdf"
+          },
+          "link-meta" : {
+            "type" : "pdf",
+            "size" : "26.5kb"
+          }
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://www.vote.org",
-        "title" : "We are good at accessbility",
-        "text" : "My link text"
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "This is an external link",
+          "external" : true,
+          "reversed" : false
+        }
+      ]
   	}
 	],
 	"list--links--reversed" : [
   	{
-    	"link" : {
-        "url" : "http://www.google.com",
-        "title" : "We are good at accessbility",
-        "text" : "My link text",
-        "reversed" : true
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "This is the sample link text",
+          "external" : false,
+          "reversed" : true
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://maps.google.com",
-        "title" : "We are good at accessbility",
-        "text" : "My link text",
-        "reversed" : true
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "This is a link to an external file",
+          "external" : true,
+          "reversed" : true,
+          ,
+          "link-icon" : {
+            "icon-id" : "fa-file-pdf"
+          },
+          "link-meta" : {
+            "type" : "pdf",
+            "size" : "26.5kb"
+          }
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://www.cnn.com",
-        "title" : "We are good at accessbility",
-        "text" : "My link text",
-        "reversed" : true
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "A link to an interal file",
+          "external" : false,
+          "reversed" : true,
+          "link-icon" : {
+            "icon-id" : "fa-file-pdf"
+          },
+          "link-meta" : {
+            "type" : "pdf",
+            "size" : "26.5kb"
+          }
+        }
+      ]
   	},
   	{
-    	"link" : {
-        "url" : "http://www.bbc.com",
-        "title" : "We are good at accessbility",
-        "text" : "My link text",
-        "reversed" : true
-      }
+    	"links" : [ 
+        {
+          "url" : "http://www.google.com",
+          "title" : "We are good at accessbility",
+          "text" : "This is an external link",
+          "external" : true,
+          "reversed" : true
+        }
+      ]
   	}
 	]
 }

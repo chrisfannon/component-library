@@ -227,6 +227,25 @@ a.reversed:hover {
 a.reversed:active {
   color: #b6dffa;
 }
+a i {
+  margin-right: 0.8rem;
+}
+a em {
+  font-size: 1.11111rem;
+  line-height: 1.5;
+  margin-left: 0.8rem;
+}
+a.external:after {
+  font-size: 1.11111rem;
+  line-height: 1.5;
+  bottom: 1px;
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 0.8rem;
+  padding-right: 0.8rem;
+  position: relative;
+}
 
 html {
   font-size: 62.5%;
