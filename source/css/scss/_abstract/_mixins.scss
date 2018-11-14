@@ -435,12 +435,12 @@
 //
 // Style Guide Mixins.Transition.medium
 @mixin sg-u-transition--m() {
-  transition: all .3s ease-out;
+  transition: all .2s ease-out;
 }
 
 // sg-u-transition--s
 //
 // Style Guide Mixins.Transition.slow
 @mixin sg-u-transition--s() {
-  transition: all .8s ease-out;
+  transition: all .4s ease-out;
 }

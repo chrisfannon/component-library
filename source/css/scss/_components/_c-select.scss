@@ -1,0 +1,107 @@
+$base: '.c-select';
+
+#{ $base } { 
+  align-items: flex-start;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  @include sg-u-space-stack--m;
+  
+  label {
+    @include sg-u-space-stack--xs;
+    @include sg-u-transition--m;
+  } 
+  select {
+    @include sg-u-space-stretch--s( 'padding' );
+    
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+  }
+  p {
+   @include sg-u-text--xs; 
+   @include sg-u-transition--m;
+  }
+  
+  @at-root #{&}__wrapper {
+    position: relative;
+    width: 100%;
+    
+    &:hover {
+      #{ $base }__fake {
+        background-color: $sg-color__blue--300;
+        border-color: $sg-color__blue--600;
+        
+        i {
+          color: $sg-color__blue--600;
+        }
+      }
+    }
+  }
+  
+  @at-root #{&}__fake {
+    @include sg-u-space-stretch--s( 'padding' );
+    @include sg-u-transition--m;
+     
+    align-items: flex-start;
+    background-color: $sg-color__grayscale--000;
+    border: 1px solid $sg-color__grayscale--020;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    @at-root #{&}__label {
+      @include sg-u-text--m; 
+      .change & {
+        animation: shrink-bounce 0.3s ease-out; 
+      }
+    }
+    @at-root #{&}__icon {
+      @include sg-u-space-inline--s;  
+    }
+  }
+  
+  @at-root #{&}.focus {
+    #{ $base }__wrapper {
+      #{ $base }__fake {
+        background-color: $sg-color__green--300;
+        border-color: $sg-color__green--600;
+        box-shadow: inset 0px -4px 0px $sg-color__green--400;
+        
+        i {
+          color: $sg-color__green--600;
+        }
+      }
+    }
+  }
+  
+  @at-root #{&}.focus {
+    #{ $base }__wrapper:hover {
+      #{ $base }__fake {
+        box-shadow: inset 0px -8px 0px $sg-color__green--400;
+      }
+    }
+  }
+}
+
+@keyframes shrink-bounce {
+  0% {
+    transform: scale( 1 );
+    opacity: 1;
+  }
+  33% {
+    transform: scale( .833 );
+    opacity: 0.4;
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale( 1 );
+    opacity: 1;
+  }
+}
