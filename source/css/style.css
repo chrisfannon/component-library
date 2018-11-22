@@ -436,6 +436,65 @@ body {
   margin: 0 0.4rem 0 0;
 }
 
+.c-block__accordion {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.c-block__accordion-item {
+  border-bottom: 1px solid #fff;
+  box-shadow: inset 0 -1px 1px 0 #cccccc;
+}
+.c-block__accordion-item__title {
+  padding: 1.6rem;
+  align-items: center;
+  color: #4d4d4d;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.c-block__accordion-item__title:after {
+  bottom: 0;
+  border-bottom: 1px dotted #e6e6e6;
+  content: " ";
+  height: 1px;
+  position: absolute;
+  width: calc( 100% - 3.2rem );
+}
+.c-block__accordion-item__title i {
+  color: #116fa2;
+  transform-origin: center;
+  transition: transform .2s ease-in;
+}
+.c-block__accordion-item__title:link {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+.c-block__accordion.use--js .c-block__accordion-item__title:hover {
+  background-color: #e6e6e6;
+  color: #116fa2;
+}
+.c-block__accordion.use--js .c-block__accordion-item__title:hover i {
+  transform: scale(1.5);
+}
+.c-block__accordion.use--js .c-block__accordion-item__title.focus, .c-block__accordion.use--js .c-block__accordion-item__title:focus {
+  background-color: #fff;
+  color: #116fa2;
+}
+.c-block__accordion.use--js .c-block__accordion-item__content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all .2s ease-out;
+}
+.c-block__accordion.use--js .c-block__accordion-item__content.open {
+  max-height: 200px;
+}
+.c-block__accordion-item__content p {
+  padding: 1.6rem;
+}
+
 .c-breadcrumb {
   font-size: 1.33333rem;
   line-height: 1.5;
