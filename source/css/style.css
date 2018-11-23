@@ -214,17 +214,17 @@ a:hover {
 a:active {
   color: #116fa2;
 }
-a.reversed:link {
+.reversed a:link {
   color: #b6dffa;
 }
-a.reversed:visited {
+.reversed a:visited {
   color: #cae778;
 }
-a.reversed:hover {
+.reversed a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: #e0a430;
 }
-a.reversed:active {
+.reversed a:active {
   color: #b6dffa;
 }
 a i {
@@ -267,6 +267,9 @@ body {
 
 p {
   margin: 0 0 1.6rem 0;
+}
+.reversed p {
+  color: #fff;
 }
 
 ::-moz-selection {
@@ -353,7 +356,47 @@ figure {
 }
 
 mark {
+  background-color: #FFEEB2;
+}
+.reversed mark {
+  background-color: #795D00;
+  color: #fff;
+}
+mark.error {
+  background-color: #EAAFAA;
+}
+mark.error a:link {
+  color: #0C5277;
+}
+mark.error a:visited {
+  color: #3F5403;
+}
+.reversed mark.error {
+  background-color: #AB362B;
+}
+.reversed mark.error a:link {
+  color: #b6dffa;
+}
+.reversed mark.error a:visited {
+  color: #cae778;
+}
+mark.success {
   background-color: #cae778;
+}
+mark.success a:link {
+  color: #106695;
+}
+mark.success a:visited {
+  color: #4E6904;
+}
+.reversed mark.success {
+  background-color: #4E6804;
+}
+.reversed mark.success a:link {
+  color: #b6dffa;
+}
+.reversed mark.success a:visited {
+  color: #cae778;
 }
 
 .hidden {

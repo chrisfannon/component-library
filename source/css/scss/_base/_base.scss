@@ -35,7 +35,7 @@ a {
 		color: $sg-color__blue--600;
 	}
 	
-	&.reversed {
+	@at-root .reversed & {
   	&:link {
     	color: $sg-color__blue--400;
   	}
@@ -95,6 +95,10 @@ body {
 
 p {
   @include sg-u-space-stack--m;
+  
+  @at-root .reversed & {
+    color: $sg-color__grayscale--000;
+  }
 }
 
 //	Remove text-shadow in selection highlight: h5bp.com/i
@@ -201,7 +205,71 @@ figure {
 
 // mark
 mark {
-  background-color: $sg-color__green--400;
+  //background-color: $sg-color__green--400;
+  //background-color: #F5F500; // Yellow - good!
+  //background-color: #F5BC00;
+  //background-color: #FFE89A;
+  background-color: #FFEEB2;
+  
+  @at-root .reversed & {
+    //background-color: #947200;
+    background-color: #795D00;
+    color: $sg-color__grayscale--000;
+  }
+  
+  &.error {
+    background-color: #EAAFAA;
+    //background-color: #F8E5E3;
+    
+    a {
+      &:link {
+        color: #0C5277;
+      }
+      &:visited {
+        color: #3F5403;
+      }
+    }
+    
+    @at-root .reversed & {
+      background-color: #AB362B;
+      
+      a {
+        &:link {
+        color: $sg-color__blue--400;
+        }
+        &:visited {
+          color: #cae778;
+        }
+      }
+    }
+  }
+  
+  &.success {
+    background-color: $sg-color__green--400;
+    
+    a {
+      &:link {
+      color: #106695;
+      }
+      &:visited {
+        color: #4E6904;
+      }
+    }
+    
+    @at-root .reversed & {
+      //background-color: $sg-color__green--600;
+      background-color: #4E6804;
+      
+      a {
+        &:link {
+        color: $sg-color__blue--400;
+        }
+        &:visited {
+          color: $sg-color__green--400;
+        }
+      }
+    }
+  }
 }
 
 //	Helper classes
